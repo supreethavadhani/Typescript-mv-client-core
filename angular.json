@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "mv-client-core": {
+      "projectType": "library",
+      "root": "projects/mv-client-core",
+      "sourceRoot": "projects/mv-client-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mv-client-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mv-client-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mv-client-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mv-client-core/src/test.ts",
+            "tsConfig": "projects/mv-client-core/tsconfig.spec.json",
+            "karmaConfig": "projects/mv-client-core/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "mv-client-core"
 }
