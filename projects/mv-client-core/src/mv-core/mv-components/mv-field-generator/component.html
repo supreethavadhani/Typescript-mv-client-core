@@ -1,0 +1,13 @@
+<!-- <mat-card class="col-6" style="padding: auto; margin:auto">
+	<h5>
+		Customer Form
+	</h5>
+	<div *ngFor="let field of fields | keyvalue" [ngSwitch]="field.value.controlType">
+		<app-mv-textbox *ngSwitchCase="'Input'" [field]="form[field.key]" [formData]="formData"></app-mv-textbox>
+		<app-mv-textarea *ngSwitchCase="'Textarea'" [field]="form[field.key]" [formData]="formData"></app-mv-textarea>
+		<div *ngSwitchCase="'Button'">
+			<app-mv-primary-button *ngIf="form[field.key].buttonType==='Primary'" name={{form[field.key].label}}></app-mv-primary-button>
+			<app-mv-secondary-button *ngIf="form[field.key].buttonType==='Secondary'" name={{form[field.key].label}}></app-mv-secondary-button>
+		</div>
+	</div>
+</mat-card> -->
