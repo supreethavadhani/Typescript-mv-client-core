@@ -19,7 +19,6 @@ import { Transposer } from './types';
         ClientConfig,
         ClientContext,
         Conventions,
-        // @ts-ignore
         Form,
         FormData,
         PanelData,
@@ -31,7 +30,6 @@ import { Transposer } from './types';
         ClientConfig,
         ClientContext,
         Conventions,
-        // @ts-ignore
         Form,
         FormData,
         PanelData,

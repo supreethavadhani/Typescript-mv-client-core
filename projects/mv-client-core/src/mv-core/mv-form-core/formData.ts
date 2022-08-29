@@ -5,7 +5,6 @@ import { ServiceAgent } from './serviceAgent';
 import { Conventions } from './conventions';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import 'rxjs/add/observable/throw';
 import { valuesDictionary } from './default-interface';
 
 

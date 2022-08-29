@@ -18,12 +18,12 @@ import {
 	FilterRequest
 } from './types';
 import {
-	throwError
+  throwError,
+  Observable
 } from 'rxjs';
 import {
 ClientContext
-} from './clientContext'
-import 'rxjs/Rx';
+} from './clientContext';
 import {
 	Form
 } from './form';
@@ -31,8 +31,6 @@ import {
 	catchError,
 	map
 } from 'rxjs/operators';
-import 'rxjs/add/observable/throw';
-import {Observable} from 'rxjs';
 
 @Injectable({
 	providedIn: 'root'

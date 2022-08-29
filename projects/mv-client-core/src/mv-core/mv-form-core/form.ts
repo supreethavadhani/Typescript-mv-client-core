@@ -6,7 +6,7 @@ import { ServiceAgent } from './serviceAgent';
 /**
  * represents the data model, both structure and run-time data
  */
-export abstract class Form {
+export class Form {
 	/**
 	 * key-Field pairs. has all the fields of this form
 	 */
@@ -49,7 +49,9 @@ export abstract class Form {
 	/**
 	 * name of this form. 
 	 */
-	public abstract getName(): string;
+	public getName(): any {
+	// name of this form
+	};
 
 	/**
 	 * create a model (data-holder) for this form
