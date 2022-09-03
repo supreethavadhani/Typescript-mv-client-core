@@ -1,4 +1,4 @@
-<mat-form-field class="col" appearance="fill">
+<mat-form-field class="col-md-12" appearance="fill">
   <mat-label>{{field?.label}} <span *ngIf="!field?.isRequired" class="optional">(optional)</span></mat-label>
   <span matPrefix>{{field?.prefix}}</span>
   <input *ngIf="control" [formControl]="control" matInput (input)="valueChangeDetector($event)"

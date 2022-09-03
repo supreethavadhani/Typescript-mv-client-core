@@ -18,12 +18,18 @@ import {
   MvDropDownComponent
 } from './mv-dropdown/component';
 import { MvTextareaComponent } from './mv-textarea/component';
+import { MvFormGeneratorComponent } from './mv-form-generator/component';
+import { MvCheckboxComponent } from './mv-checkbox/component';
+import { MvDatePickerComponent } from './mv-datepicker/component';
 
 @NgModule({
   declarations: [
     MvTextboxComponent,
     MvDropDownComponent,
-    MvTextareaComponent
+    MvTextareaComponent,
+    MvFormGeneratorComponent,
+    MvCheckboxComponent,
+    MvDatePickerComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +39,10 @@ import { MvTextareaComponent } from './mv-textarea/component';
   exports: [
     MvTextboxComponent,
     MvDropDownComponent,
-    MvTextareaComponent
+    MvTextareaComponent,
+    MvFormGeneratorComponent,
+    MvCheckboxComponent,
+    MvDatePickerComponent
   ]
 })
 export class MVComponentsModule {}
