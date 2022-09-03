@@ -1,25 +1,29 @@
 import {
-    NgModule
+  NgModule
 } from '@angular/core';
 import {
-    MatFormFieldModule
+  MatFormFieldModule
 } from '@angular/material/form-field';
 import {
-    MatInputModule
+  MatInputModule
 } from '@angular/material/input';
+import {
+  MatSelectModule
+} from '@angular/material/select';
 
 const materialModules = [
-    MatFormFieldModule,
-    MatInputModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule
 ];
 
 @NgModule({
-    imports: [
-        ...materialModules
-    ],
-    exports: [
-        ...materialModules
-    ]
+  imports: [
+    ...materialModules
+  ],
+  exports: [
+    ...materialModules
+  ]
 })
 
 export class MaterialModule {}

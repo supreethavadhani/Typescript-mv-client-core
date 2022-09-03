@@ -1,0 +1,15 @@
+<mat-form-field class="col-md-12" appearance="fill">
+  <mat-label>{{field?.label}}<span *ngIf="!field?.isRequired" class="optional">(optional)</span></mat-label>
+  <mat-select disableOptionCentering="true" (selectionChange)="currentValue($event.value);"
+    [required]="field?.isRequired" placeholder="{{field?.placeHolder}}" [formControl]="formControl">
+    <mat-option *ngIf="!field?.isRequired">None</mat-option>
+    <mat-option *ngFor="let list of formData?.lists[field?.name]" [(value)]="list.value">
+      {{list.text}}
+    </mat-option>
+  </mat-select>
+  <mat-error>
+    <div *ngIf="this.formControl?.errors">
+      {{this.field.errorId}}
+    </div>
+  </mat-error>
+</mat-form-field>

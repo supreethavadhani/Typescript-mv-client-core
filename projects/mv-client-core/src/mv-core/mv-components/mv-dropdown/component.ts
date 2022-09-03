@@ -14,17 +14,17 @@ import { FormData } from '../../mv-form-core/formData';
  * app-mv -> metadev component prefix
  */
 @Component({
-	selector: 'app-mv-textbox',
+	selector: 'app-mv-dropdown',
 	templateUrl: './component.html',
 	styleUrls: []
 })
 
 /** 
  * Wrapper class for angular material.
- * Unpacks values from the model to render a textbox
- * @ouput - valueChange - value change emitter.
+ * Unpacks values from the model to render a dropdown
  */
-export class MvTextboxComponent implements OnInit {
+
+export class MvDropDownComponent implements OnInit {
 	@Input() public field: Field  | undefined = {
 		label:"",
 		name:"",
@@ -35,25 +35,20 @@ export class MvTextboxComponent implements OnInit {
 	};
 	@Input() public formData: FormData | undefined;
 	@Input() public type: string | undefined;
-	@Output() public valueChange = new EventEmitter < any > ();
+	@Output() public valueChange = new EventEmitter < string > ();
+	@Output() public changeListener = new EventEmitter < any > ();
 
+	public formControl: FormControl | undefined;
 
-	control: FormControl | undefined;
-
-	/**
-	 * On component initalization get
-	 * form contorl from the formData
-	 */
 	ngOnInit() {
 		if(this.formData && this.field) {
-			this.control = this.formData.formGroup.get(this.field.name) as FormControl;
-	
+			this.formControl = this.formData.formGroup.get(this.field.name) as FormControl;
+			this.formControl.valueChanges.subscribe(value => {
+				this.changeListener.next(value)
+			});
 		}
 	}
-
-	valueChangeDetector(_$event:any) {
-		if(this.formData && this.field) {
-		this.valueChange.next(this.formData.getFieldValue(this.field.name));
-		}
+	currentValue(value: any) {
+		this.valueChange.next(value);
 	}
 }
