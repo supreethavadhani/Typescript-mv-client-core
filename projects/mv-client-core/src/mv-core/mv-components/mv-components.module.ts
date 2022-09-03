@@ -17,11 +17,13 @@ import {
 import {
   MvDropDownComponent
 } from './mv-dropdown/component';
+import { MvTextareaComponent } from './mv-textarea/component';
 
 @NgModule({
   declarations: [
     MvTextboxComponent,
-    MvDropDownComponent
+    MvDropDownComponent,
+    MvTextareaComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import {
   ],
   exports: [
     MvTextboxComponent,
-    MvDropDownComponent
+    MvDropDownComponent,
+    MvTextareaComponent
   ]
 })
 export class MVComponentsModule {}

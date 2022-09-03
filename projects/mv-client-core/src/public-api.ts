@@ -12,4 +12,5 @@ export * from './mv-core/mv-form-core/form';
 export * from './mv-core/mv-form-core/serviceAgent';
 export * from './mv-core/mv-form-core/formData';
 export * from './mv-core/mv-form-core/types';
-export * from './mv-core/mv-components/mv-dropdown/component'
+export * from './mv-core/mv-components/mv-dropdown/component';
+export * from './mv-core/mv-components/mv-textarea/component';
