@@ -18,6 +18,10 @@ The package is built using Angular. Also the package uses [Material Design Compo
 
 ---
 
+## How to install
+
+Use `npm i -S mv-core` to install package to your library
+
 ## Example.
 
 An example project which uses MvClientCore can be found [here](https://github.com/supreethavadhani/metadev-client-example).
