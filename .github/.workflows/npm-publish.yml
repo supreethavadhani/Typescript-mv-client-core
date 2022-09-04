@@ -22,5 +22,6 @@ jobs:
             name: Build
           - name: publish
             run: npm publish --access public
+            working-directory: dist/mv-client-core
             env:
               NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_PACKAGE }}

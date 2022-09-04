@@ -1,24 +1,25 @@
-# MvClientCore
+Metadev-Client-Core
+===========
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## Introduction.
 
-## Code scaffolding
+MvCLientCore is a package which unpacks the metadata to render the client components. Also it creates an abstraction layer for using CRUD endpoints. The goal of the package is to reduce the code written for frontend development. The package is best suited for [ERP](https://en.wikipedia.org/wiki/Enterprise_resource_planning) apps which have a ton of forms.
 
-Run `ng generate component component-name --project mv-client-core` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project mv-client-core`.
-> Note: Don't forget to add `--project mv-client-core` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+**Metadev** is an abbreviation for Metadata-Driven development.
 
-Run `ng build mv-client-core` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Publishing
+## How it works?
 
-After building your library with `ng build mv-client-core`, go to the dist folder `cd dist/mv-client-core` and run `npm publish`.
+The package is built using Angular. Also the package uses [Material Design Components](https://material.angular.io/). 
 
-## Running unit tests
+[Metadev-Server-Example](https://github.com/supreethavadhani/metadev-server-example) generates the models using simple JSON files *(e.g - [customer-from](https://github.com/supreethavadhani/metadev-server-example/blob/master/assets/spec/form/customer.frm.json)).*  These generated models are copied into to the project folder. Generating these models helps engineers/developers to spend more time on the design rather than the syntax. Also, anyone who does not have any prior experience with typescript will be able to generate models in no-time. The package unpacks these generated models to render the forms.
+*The generated files can be found [here](https://github.com/supreethavadhani/metadev-client-example/tree/master/src/app/framework-modules/formdata/gen).*
 
-Run `ng test mv-client-core` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Further help
+## Example.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+An example project which uses MvClientCore can be found [here](https://github.com/supreethavadhani/metadev-client-example).
+

@@ -1,6 +1,6 @@
 {
   "name": "mv-core",
-  "version": "0.0.32",
+  "version": "0.0.40",
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"
@@ -19,6 +19,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supreethavadhani/mv-client-core"
   },
   "author": "",
   "license": "ISC"
