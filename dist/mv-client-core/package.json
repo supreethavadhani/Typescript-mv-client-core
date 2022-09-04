@@ -1,0 +1,37 @@
+{
+  "name": "mv-core",
+  "version": "0.0.29",
+  "peerDependencies": {
+    "@angular/common": "^13.3.0",
+    "@angular/core": "^13.3.0"
+  },
+  "dependencies": {
+    "@angular/cdk": "^14.1.3",
+    "tslib": "^2.3.0",
+    "@angular/material": "^14.1.3"
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.",
+  "main": "karma.conf.js",
+  "author": "",
+  "license": "ISC",
+  "module": "fesm2015/mv-core.mjs",
+  "es2020": "fesm2020/mv-core.mjs",
+  "esm2020": "esm2020/mv-core.mjs",
+  "fesm2020": "fesm2020/mv-core.mjs",
+  "fesm2015": "fesm2015/mv-core.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/mv-core.mjs",
+      "es2020": "./fesm2020/mv-core.mjs",
+      "es2015": "./fesm2015/mv-core.mjs",
+      "node": "./fesm2015/mv-core.mjs",
+      "default": "./fesm2020/mv-core.mjs"
+    }
+  },
+  "sideEffects": false
+}

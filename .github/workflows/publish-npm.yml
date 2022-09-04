@@ -13,10 +13,11 @@ jobs:
         uses: actions/checkout@v2.4.2
       - name: node
         uses: actions/setup-node@v3
-          with:
-            node-version: 16
-            registry-url: https://registry.npmjs.org
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org
       - name: publish
         run: npm publish --access public
+        working-directory: mv-client-core/dist/mv-client-core
         env:
           NODE_AUTH_TOKEN: ${{NPM_PUBLISH_PACKAGE}} 
