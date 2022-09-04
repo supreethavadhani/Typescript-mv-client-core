@@ -1,0 +1,13 @@
+<mat-form-field class="col-md-12" appearance="fill">
+	<mat-label>{{field?.label}} <span *ngIf="!field?.isRequired" class="optional">(optional)</span></mat-label>
+	<span matPrefix>{{field?.prefix}}</span>
+	<textarea [formControl]="control" matInput (input)="valueChangeDetector($event)"
+		[required]="field?.isRequired" [readonly]="field?.isEditable" placeholder="{{field?.placeHolder}}"> </textarea>
+	<mat-hint>{{field?.hint}}</mat-hint>
+	<mat-icon matSuffix>{{field?.icon}}</mat-icon>
+	<mat-error>
+		<div *ngIf="this.control?.errors">
+			{{this.field.errorId}}
+		</div>
+	</mat-error>
+</mat-form-field>

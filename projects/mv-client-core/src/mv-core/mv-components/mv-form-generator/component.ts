@@ -4,13 +4,13 @@ import {
 	OnInit
 } from '@angular/core';
 import {
-	FormControl,
+	FormControl
 } from '@angular/forms';
 import { Form } from '../../mv-form-core/form';
 import { FormData } from '../../mv-form-core/formData';
 
 @Component({
-	selector: 'app-mv-field-generator',
+	selector: 'app-mv-form-generator',
 	templateUrl: './component.html',
 	styleUrls: []
 })
@@ -23,16 +23,15 @@ import { FormData } from '../../mv-form-core/formData';
  * @formData - FormData 
  */
 
-export class MvFieldGeneratorComponent implements OnInit {
+export class MvFormGeneratorComponent implements OnInit {
 	@Input() public formData: FormData | undefined;
 
 	fields: any;
 	form: Form | undefined;
+	control: FormControl | undefined;
 
 	ngOnInit() {
-		if(this.formData){
-		this.form = this.formData.form;
-		this.fields = this.formData.form.fields;
-		}
+		this.form = this.formData?.form;
+		this.fields = this.formData?.form.fields;
 	}
 }
