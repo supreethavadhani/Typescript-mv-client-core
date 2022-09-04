@@ -17,8 +17,10 @@ jobs:
             with:
               node-version: 16
               registry-url: https://registry.npmjs.org
+          - run: npm ci --ignore-scripts
+          - run: npm run build --if-present
+            name: Build
           - name: publish
             run: npm publish --access public
-            working-directory: dist/mv-client-core
             env:
               NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_PACKAGE }}
