@@ -1,4 +1,4 @@
-<mat-card class="col-md-12">
+<mat-card class="col-md-12" style="margin: 0 auto;">
   <div *ngFor="let field of fields | keyvalue" [ngSwitch]="field.value.controlType">
     <app-mv-textbox class="col" *ngSwitchCase="'Input'" [field]="form[field.key]" [formData]="formData"></app-mv-textbox>
     <app-mv-textarea class="col" *ngSwitchCase="'Textarea'" [field]="form[field.key]" [formData]="formData"></app-mv-textarea>
