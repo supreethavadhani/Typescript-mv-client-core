@@ -19,6 +19,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import * as i1$3 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
+import * as i1$5 from '@angular/material/snack-bar';
+import { MatSnackBarModule, MatSnackBarConfig } from '@angular/material/snack-bar';
 import * as i1$1 from '@angular/material/core';
 import { __decorate } from 'tslib';
 import { throwError, Observable } from 'rxjs';
@@ -46,7 +48,8 @@ const materialModules = [
     MatCardModule,
     MatDatepickerModule,
     MatTooltipModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
 ];
 class MaterialModule {
 }
@@ -58,14 +61,16 @@ MaterialModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version:
         MatCardModule,
         MatDatepickerModule,
         MatTooltipModule,
-        MatButtonModule], exports: [MatFormFieldModule,
+        MatButtonModule,
+        MatSnackBarModule], exports: [MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
         MatCheckboxModule,
         MatCardModule,
         MatDatepickerModule,
         MatTooltipModule,
-        MatButtonModule] });
+        MatButtonModule,
+        MatSnackBarModule] });
 MaterialModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, imports: [materialModules, MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
@@ -73,7 +78,8 @@ MaterialModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version:
         MatCardModule,
         MatDatepickerModule,
         MatTooltipModule,
-        MatButtonModule] });
+        MatButtonModule,
+        MatSnackBarModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, decorators: [{
             type: NgModule,
             args: [{
@@ -1782,6 +1788,44 @@ FormModule = __decorate([
     })
 ], FormModule);
 
+class MessageService {
+    constructor(snackBar) {
+        this.snackBar = snackBar;
+    }
+    showSuccess(message) {
+        const config = new MatSnackBarConfig();
+        config.panelClass = ['snackbar-success'];
+        config.duration = 3000;
+        this.snackBar.open(message, undefined, config);
+    }
+    showError(message) {
+        const config = new MatSnackBarConfig();
+        config.panelClass = ['snackbar-error'];
+        config.duration = 3000;
+        this.snackBar.open(message, undefined, config);
+    }
+    showInfo(message) {
+        const config = new MatSnackBarConfig();
+        config.panelClass = ['snackbar-info'];
+        config.duration = 3000;
+        this.snackBar.open(message, undefined, config);
+    }
+    showDetail(message) {
+        const config = new MatSnackBarConfig();
+        config.horizontalPosition = 'end';
+        config.verticalPosition = 'bottom';
+        this.snackBar.open(message, undefined, config);
+    }
+    close() {
+        this.snackBar.dismiss();
+    }
+}
+MessageService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, deps: [{ token: i1$5.MatSnackBar }], target: i0.ɵɵFactoryTarget.Injectable });
+MessageService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, decorators: [{
+            type: Injectable
+        }], ctorParameters: function () { return [{ type: i1$5.MatSnackBar }]; } });
+
 /*
  * Public API Surface of mv-client-core
  */
@@ -1790,5 +1834,5 @@ FormModule = __decorate([
  * Generated bundle index. Do not edit.
  */
 
-export { Form, FormData$1 as FormData, FormModule, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
+export { Form, FormData$1 as FormData, FormModule, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MessageService, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
 //# sourceMappingURL=mv-core.mjs.map

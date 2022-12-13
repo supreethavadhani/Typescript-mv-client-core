@@ -25,6 +25,9 @@ import {
 import {
   MatButtonModule
 } from '@angular/material/button';
+import {
+  MatSnackBarModule
+} from '@angular/material/snack-bar';
 
 const materialModules = [
   MatFormFieldModule,
@@ -34,7 +37,8 @@ const materialModules = [
   MatCardModule,
   MatDatepickerModule,
   MatTooltipModule,
-  MatButtonModule
+  MatButtonModule,
+  MatSnackBarModule
 ];
 
 @NgModule({
