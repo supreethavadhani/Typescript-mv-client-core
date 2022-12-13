@@ -1,0 +1,48 @@
+.snackbar-success{
+    background:white;
+    color:black;
+    font-style: italic;
+    position: fixed;
+    font-family: Roboto-Light;
+    top:25vh;
+    height:8vh;
+    font-weight:50 !important;
+    right:0;
+    padding:0;
+    margin:0;
+    border-left:4px solid #0BD728;
+    font-size:2vw;
+}
+
+.snackbar-error{
+    background:white;
+    color:black;
+    font-style: italic;
+    position: fixed;
+    font-family: Roboto-Light;
+    top:25vh;
+    height:8vh;
+    font-weight:50 !important;
+    right:0;
+    padding:0;
+    margin:0;
+    border-left:4px solid #E52423;
+    font-size:2vw;
+}
+
+.snackbar-info{
+    background:white;
+    color:black;
+    font-style: italic;
+    position: fixed;
+    font-family: Roboto-Light;
+    top:25vh;
+    height:8vh;
+    font-weight:50 !important;
+    right:0;
+    padding:0;
+    margin:0;
+    border-left:4px solid #62B1F2;
+    font-size:2vw;
+}
+
