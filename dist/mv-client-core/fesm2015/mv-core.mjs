@@ -16,6 +16,8 @@ import * as i1$2 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import * as i5 from '@angular/material/datepicker';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
 import * as i1$1 from '@angular/material/core';
 import { __decorate } from 'tslib';
 import { throwError, Observable } from 'rxjs';
@@ -41,7 +43,9 @@ const materialModules = [
     MatSelectModule,
     MatCheckboxModule,
     MatCardModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTooltipModule,
+    MatButtonModule
 ];
 class MaterialModule {
 }
@@ -51,18 +55,24 @@ MaterialModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version:
         MatSelectModule,
         MatCheckboxModule,
         MatCardModule,
-        MatDatepickerModule], exports: [MatFormFieldModule,
+        MatDatepickerModule,
+        MatTooltipModule,
+        MatButtonModule], exports: [MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
         MatCheckboxModule,
         MatCardModule,
-        MatDatepickerModule] });
+        MatDatepickerModule,
+        MatTooltipModule,
+        MatButtonModule] });
 MaterialModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, imports: [materialModules, MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
         MatCheckboxModule,
         MatCardModule,
-        MatDatepickerModule] });
+        MatDatepickerModule,
+        MatTooltipModule,
+        MatButtonModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, decorators: [{
             type: NgModule,
             args: [{
@@ -1758,6 +1768,24 @@ FormModule = __decorate([
     })
 ], FormModule);
 
+class MvPrimaryButtonComponent {
+    constructor() {
+        this.isDisabled = false;
+    }
+}
+MvPrimaryButtonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvPrimaryButtonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+MvPrimaryButtonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvPrimaryButtonComponent, selector: "app-mv-primary-button", inputs: { name: "name", tooltip: "tooltip", isDisabled: "isDisabled" }, ngImport: i0, template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button color=\"primary\">{{name}}</button>\r\n\r\n" });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvPrimaryButtonComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'app-mv-primary-button', template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button color=\"primary\">{{name}}</button>\r\n\r\n" }]
+        }], ctorParameters: function () { return []; }, propDecorators: { name: [{
+                type: Input
+            }], tooltip: [{
+                type: Input
+            }], isDisabled: [{
+                type: Input
+            }] } });
+
 /*
  * Public API Surface of mv-client-core
  */
@@ -1766,5 +1794,5 @@ FormModule = __decorate([
  * Generated bundle index. Do not edit.
  */
 
-export { Form, FormData$1 as FormData, FormModule, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
+export { Form, FormData$1 as FormData, FormModule, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
 //# sourceMappingURL=mv-core.mjs.map

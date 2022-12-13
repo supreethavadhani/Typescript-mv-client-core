@@ -19,6 +19,12 @@ import {
 import {
   MatDatepickerModule
 } from '@angular/material/datepicker';
+import {
+  MatTooltipModule
+} from '@angular/material/tooltip';
+import {
+  MatButtonModule
+} from '@angular/material/button';
 
 const materialModules = [
   MatFormFieldModule,
@@ -26,7 +32,9 @@ const materialModules = [
   MatSelectModule,
   MatCheckboxModule,
   MatCardModule,
-  MatDatepickerModule
+  MatDatepickerModule,
+  MatTooltipModule,
+  MatButtonModule
 ];
 
 @NgModule({
