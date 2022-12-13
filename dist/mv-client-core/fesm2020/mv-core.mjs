@@ -1826,6 +1826,24 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
             type: Injectable
         }], ctorParameters: function () { return [{ type: i1$5.MatSnackBar }]; } });
 
+class MvSecondaryButtonComponent {
+    constructor() {
+        this.isDisabled = false;
+    }
+}
+MvSecondaryButtonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSecondaryButtonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+MvSecondaryButtonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvSecondaryButtonComponent, selector: "app-mv-secondary-button", inputs: { name: "name", tooltip: "tooltip", isDisabled: "isDisabled" }, ngImport: i0, template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button>{{name}}</button>\r\n\r\n" });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSecondaryButtonComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'app-mv-secondary-button', template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button>{{name}}</button>\r\n\r\n" }]
+        }], ctorParameters: function () { return []; }, propDecorators: { name: [{
+                type: Input
+            }], tooltip: [{
+                type: Input
+            }], isDisabled: [{
+                type: Input
+            }] } });
+
 /*
  * Public API Surface of mv-client-core
  */
@@ -1834,5 +1852,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { Form, FormData$1 as FormData, FormModule, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MessageService, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
+export { Form, FormData$1 as FormData, FormModule, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MessageService, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvSecondaryButtonComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
 //# sourceMappingURL=mv-core.mjs.map

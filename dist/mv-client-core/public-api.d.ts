@@ -15,4 +15,5 @@ export * from './mv-core/mv-components/mv-form-generator/component';
 export * from './mv-core/mv-components/mv-datepicker/component';
 export * from './mv-core/mv-components/mv-checkbox/component';
 export * from './mv-core/mv-components/mv-primary-button/component';
+export * from './mv-core/mv-components/mv-secondary-button/component';
 //# sourceMappingURL=public-api.d.ts.map
