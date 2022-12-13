@@ -17,12 +17,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import * as i5 from '@angular/material/datepicker';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import * as i1$3 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i1$1 from '@angular/material/core';
 import { __decorate } from 'tslib';
 import { throwError, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import * as i1$3 from '@angular/common/http';
+import * as i1$4 from '@angular/common/http';
 import { HttpParams } from '@angular/common/http';
 
 class MvClientCoreService {
@@ -338,6 +339,24 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                 type: Input
             }] } });
 
+class MvPrimaryButtonComponent {
+    constructor() {
+        this.isDisabled = false;
+    }
+}
+MvPrimaryButtonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvPrimaryButtonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+MvPrimaryButtonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvPrimaryButtonComponent, selector: "app-mv-primary-button", inputs: { name: "name", tooltip: "tooltip", isDisabled: "isDisabled" }, ngImport: i0, template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button color=\"primary\">{{name}}</button>\r\n\r\n", dependencies: [{ kind: "component", type: i1$3.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvPrimaryButtonComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'app-mv-primary-button', template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button color=\"primary\">{{name}}</button>\r\n\r\n" }]
+        }], ctorParameters: function () { return []; }, propDecorators: { name: [{
+                type: Input
+            }], tooltip: [{
+                type: Input
+            }], isDisabled: [{
+                type: Input
+            }] } });
+
 class MVComponentsModule {
 }
 MVComponentsModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MVComponentsModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
@@ -346,14 +365,16 @@ MVComponentsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", vers
         MvTextareaComponent,
         MvFormGeneratorComponent,
         MvCheckboxComponent,
-        MvDatePickerComponent], imports: [CommonModule,
+        MvDatePickerComponent,
+        MvPrimaryButtonComponent], imports: [CommonModule,
         MaterialModule,
         ReactiveFormsModule], exports: [MvTextboxComponent,
         MvDropDownComponent,
         MvTextareaComponent,
         MvFormGeneratorComponent,
         MvCheckboxComponent,
-        MvDatePickerComponent] });
+        MvDatePickerComponent,
+        MvPrimaryButtonComponent] });
 MVComponentsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MVComponentsModule, imports: [CommonModule,
         MaterialModule,
         ReactiveFormsModule] });
@@ -366,7 +387,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                         MvTextareaComponent,
                         MvFormGeneratorComponent,
                         MvCheckboxComponent,
-                        MvDatePickerComponent
+                        MvDatePickerComponent,
+                        MvPrimaryButtonComponent,
                     ],
                     imports: [
                         CommonModule,
@@ -379,7 +401,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                         MvTextareaComponent,
                         MvFormGeneratorComponent,
                         MvCheckboxComponent,
-                        MvDatePickerComponent
+                        MvDatePickerComponent,
+                        MvPrimaryButtonComponent
                     ]
                 }]
         }] });
@@ -1605,14 +1628,14 @@ class ServiceAgent {
         document.body.removeChild(a);
     }
 }
-ServiceAgent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, deps: [{ token: i1$3.HttpClient }, { token: ClientConfig }, { token: ClientContext }], target: i0.ɵɵFactoryTarget.Injectable });
+ServiceAgent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, deps: [{ token: i1$4.HttpClient }, { token: ClientConfig }, { token: ClientContext }], target: i0.ɵɵFactoryTarget.Injectable });
 ServiceAgent.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], ctorParameters: function () { return [{ type: i1$3.HttpClient }, { type: ClientConfig }, { type: ClientContext }]; } });
+        }], ctorParameters: function () { return [{ type: i1$4.HttpClient }, { type: ClientConfig }, { type: ClientContext }]; } });
 
 /**
  * transposed column name is PRE + key to ensure that it does not clash with any existing attribute
@@ -1767,24 +1790,6 @@ FormModule = __decorate([
         ]
     })
 ], FormModule);
-
-class MvPrimaryButtonComponent {
-    constructor() {
-        this.isDisabled = false;
-    }
-}
-MvPrimaryButtonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvPrimaryButtonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvPrimaryButtonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvPrimaryButtonComponent, selector: "app-mv-primary-button", inputs: { name: "name", tooltip: "tooltip", isDisabled: "isDisabled" }, ngImport: i0, template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button color=\"primary\">{{name}}</button>\r\n\r\n" });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvPrimaryButtonComponent, decorators: [{
-            type: Component,
-            args: [{ selector: 'app-mv-primary-button', template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button color=\"primary\">{{name}}</button>\r\n\r\n" }]
-        }], ctorParameters: function () { return []; }, propDecorators: { name: [{
-                type: Input
-            }], tooltip: [{
-                type: Input
-            }], isDisabled: [{
-                type: Input
-            }] } });
 
 /*
  * Public API Surface of mv-client-core
