@@ -4,6 +4,7 @@ import { Vo, FilterRequest } from './types';
 import { Observable } from 'rxjs';
 import { ClientContext } from './clientContext';
 import { Form } from './form';
+import 'rxjs/add/operator/map';
 import * as i0 from "@angular/core";
 export declare class ServiceAgent {
     private http;

@@ -1,6 +1,6 @@
 {
   "name": "mv-core",
-  "version": "0.0.46",
+  "version": "0.0.47",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -26,6 +26,7 @@
     "moment-timezone": "^0.5.37",
     "react-moment": "^1.1.2",
     "rxjs": "~7.5.0",
+    "rxjs-compat": "^6.6.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

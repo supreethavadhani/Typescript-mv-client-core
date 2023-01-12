@@ -31,6 +31,7 @@ import {
 	catchError,
 	map
 } from 'rxjs/operators';
+import 'rxjs/add/operator/map';
 
 @Injectable({
 	providedIn: 'root'
@@ -87,7 +88,7 @@ export class ServiceAgent {
 			headers: headers,
 			params: params
 		});
-		return obs.pipe(map((resp:HttpResponse<ServerResponse>) => {
+		return obs.pipe(map((resp:any) => {
 			if (!resp.ok) {
 				const msg = 'Server Error. http-status :' + resp.status + '=' + resp.statusText + (resp.body ? 'Response: ' + JSON.stringify(resp.body) : '');
 				console.error(msg);
@@ -137,25 +138,24 @@ export class ServiceAgent {
 	 * filter rows for a form and return raw-rows. 
 	 * Note that the returned data is NOT set to any model before returning it the caller
 	 */
-	public filter(form: Form, filters: FilterRequest): Observable < Vo[] > {
-		const serviceName = form.getServiceName(Conventions.OP_FILTER);
-		if (!serviceName) {
-			return throwError(Conventions.OP_FILTER + ' operation is not allowed.');
-		}
+    public filter(form:Form, filters: FilterRequest): Observable<Vo[]> {
+        const serviceName = form.getServiceName(Conventions.OP_FILTER);
+        if (!serviceName) {
+            return throwError(() => new Error (Conventions.OP_FILTER + ' operation is not allowed.'));
+        }
 
-		const obs = this.serve(serviceName, {
-			data: filters
-		});
-		return obs.pipe(
-			map((vo:any) => {
-				return vo['list'] as Vo[];
-			}),
-			catchError(msgs => {
+        const obs = this.serve(serviceName, { data: filters });
+        return obs.pipe(
+            map(vo => {
+                return vo['list'] as Vo[];
+            }),
+            catchError(msgs => {
 				console.error('catching in sa')
-				throw msgs;
-			})
-		);
-	}
+                throw msgs;
+            })
+        );
+    }
+
 	/**
 	 * 
 	 * @param call parameters for serve that was interrupted.

@@ -27,6 +27,7 @@ import { throwError, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import * as i1$4 from '@angular/common/http';
 import { HttpParams } from '@angular/common/http';
+import 'rxjs/add/operator/map';
 
 class MvClientCoreService {
     constructor() { }
@@ -872,12 +873,12 @@ class PanelData {
     filter(filters) {
         const serviceName = this.form.getServiceName(Conventions.OP_FILTER);
         if (!serviceName) {
-            return throwError(Conventions.OP_FILTER + ' operation is not allowed.');
+            return throwError(() => new Error(Conventions.OP_FILTER + ' operation is not allowed.'));
         }
         const payload = filters ? { data: filters } : {};
         this.resetMessages();
         this.waitingForServerResponse = false;
-        return this.serverAgent.serve(serviceName, payload).pipe(map((vo) => {
+        return this.serverAgent.serve(serviceName, payload).pipe(map(vo => {
             this.waitingForServerResponse = false;
             return vo['list'];
         }), catchError(msgs => {
@@ -1571,12 +1572,10 @@ class ServiceAgent {
     filter(form, filters) {
         const serviceName = form.getServiceName(Conventions.OP_FILTER);
         if (!serviceName) {
-            return throwError(Conventions.OP_FILTER + ' operation is not allowed.');
+            return throwError(() => new Error(Conventions.OP_FILTER + ' operation is not allowed.'));
         }
-        const obs = this.serve(serviceName, {
-            data: filters
-        });
-        return obs.pipe(map((vo) => {
+        const obs = this.serve(serviceName, { data: filters });
+        return obs.pipe(map(vo => {
             return vo['list'];
         }), catchError(msgs => {
             console.error('catching in sa');

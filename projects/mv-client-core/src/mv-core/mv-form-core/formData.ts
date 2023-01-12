@@ -350,16 +350,16 @@ export class PanelData {
      * filter rows for this form and return raw-rows. 
      * Note that the returned data is NOT set to any model before returning it the caller
      */
-    public filter(filters?: FilterRequest): Observable<Vo[]> {
+   public filter(filters?: FilterRequest): Observable<Vo[]> {
         const serviceName = this.form.getServiceName(Conventions.OP_FILTER);
         if (!serviceName) {
-            return throwError(Conventions.OP_FILTER + ' operation is not allowed.');
+            return throwError(() => new Error (Conventions.OP_FILTER + ' operation is not allowed.'));
         }
         const payload = filters ? { data: filters } : {};
         this.resetMessages();
         this.waitingForServerResponse = false;
         return this.serverAgent.serve(serviceName, payload).pipe(
-            map((vo:any) => {
+            map(vo => {
                 this.waitingForServerResponse = false;
                 return vo['list'] as Vo[];
             }),
@@ -371,6 +371,7 @@ export class PanelData {
             })
         );
     }
+
 
     /**
      * filter rows for this form and return raw-rows. 
