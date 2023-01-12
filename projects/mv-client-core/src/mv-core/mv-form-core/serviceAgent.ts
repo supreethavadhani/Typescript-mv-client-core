@@ -63,9 +63,10 @@ export class ServiceAgent {
 			}
 		} = {},
 		withAuth: boolean = true):(Observable < Vo >) {
-
+		console.log("entering here")
 		const token = this.ctx.getToken();
 		if (withAuth && !token) {
+			console.log('not logged in')
 			//not logged-in.To be re-tried after  a successful login
 			return this.notLoggedIn({
 				serviceName: serviceName,
@@ -88,7 +89,9 @@ export class ServiceAgent {
 			headers: headers,
 			params: params
 		});
+		console.log("entering obs")
 		return obs.pipe(map((resp:any) => {
+			console.log("entering map")
 			if (!resp.ok) {
 				const msg = 'Server Error. http-status :' + resp.status + '=' + resp.statusText + (resp.body ? 'Response: ' + JSON.stringify(resp.body) : '');
 				console.error(msg);
