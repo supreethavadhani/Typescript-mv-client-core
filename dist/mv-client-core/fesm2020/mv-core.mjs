@@ -1495,15 +1495,15 @@ class ServiceAgent {
     serve(serviceName, options = {}, withAuth = true) {
         console.log("entering here");
         const token = this.ctx.getToken();
-        if (withAuth && !token) {
-            console.log('not logged in');
-            //not logged-in.To be re-tried after  a successful login
-            return this.notLoggedIn({
-                serviceName: serviceName,
-                options: options,
-                withAuth: withAuth
-            });
-        }
+        // if (withAuth && !token) {
+        // 	console.log('not logged in')
+        // 	//not logged-in.To be re-tried after  a successful login
+        // 	return this.notLoggedIn({
+        // 		serviceName: serviceName,
+        // 		options: options,
+        // 		withAuth: withAuth
+        // 	});
+        // }
         const headers = options.headers || {};
         headers[Conventions.HEADER_SERVICE] = serviceName;
         if (withAuth) {
