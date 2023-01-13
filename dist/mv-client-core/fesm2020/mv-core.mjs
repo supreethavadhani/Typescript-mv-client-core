@@ -1492,10 +1492,9 @@ class ServiceAgent {
      * @param headers any special headers to be communicated. Typically for additional authentication.
      * @param withAuth true if the request is to be sent with auth. If auth is not present, this wil trigger a login
      */
-    serve(serviceName, options = {}, withAuth = true) {
+    serve(serviceName, options = {}, withAuth = false) {
         console.log("entering here");
         const token = this.ctx.getToken();
-        console.log(withAuth);
         if (withAuth && !token) {
             console.log('not logged in');
             //not logged-in.To be re-tried after  a successful login
