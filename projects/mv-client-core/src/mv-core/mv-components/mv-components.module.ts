@@ -22,6 +22,7 @@ import { MvFormGeneratorComponent } from './mv-form-generator/component';
 import { MvCheckboxComponent } from './mv-checkbox/component';
 import { MvDatePickerComponent } from './mv-datepicker/component';
 import { MvPrimaryButtonComponent } from './mv-primary-button/component';
+import { MvTableComponent } from './mv-table/component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MvPrimaryButtonComponent } from './mv-primary-button/component';
     MvCheckboxComponent,
     MvDatePickerComponent,
     MvPrimaryButtonComponent,
+    MvTableComponent,
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,8 @@ import { MvPrimaryButtonComponent } from './mv-primary-button/component';
     MvFormGeneratorComponent,
     MvCheckboxComponent,
     MvDatePickerComponent,
-    MvPrimaryButtonComponent
+    MvPrimaryButtonComponent,
+    MvTableComponent
   ]
 })
 export class MVComponentsModule {}

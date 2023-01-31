@@ -28,6 +28,7 @@ import {
 import {
   MatSnackBarModule
 } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 
 const materialModules = [
   MatFormFieldModule,
@@ -38,7 +39,8 @@ const materialModules = [
   MatDatepickerModule,
   MatTooltipModule,
   MatButtonModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatTableModule,
 ];
 
 @NgModule({
