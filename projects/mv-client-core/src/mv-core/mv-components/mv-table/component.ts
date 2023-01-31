@@ -7,6 +7,7 @@ import { Vo } from '../../mv-form-core/types';
 @Component({
 	selector: 'app-mv-table',
 	templateUrl: './component.html',
+	styleUrls:['./component.scss']
 })
 
 export class MvTableComponent {
