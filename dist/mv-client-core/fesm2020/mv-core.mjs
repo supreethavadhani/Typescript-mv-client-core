@@ -19,16 +19,16 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import * as i1$3 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
-import * as i1$6 from '@angular/material/snack-bar';
+import * as i1$5 from '@angular/material/snack-bar';
 import { MatSnackBarModule, MatSnackBarConfig } from '@angular/material/snack-bar';
-import * as i1$4 from '@angular/material/table';
+import * as i2$2 from '@angular/material/table';
 import { MatTableModule, MatTableDataSource, MatTable } from '@angular/material/table';
 import * as i1$1 from '@angular/material/core';
 import { MatSort } from '@angular/material/sort';
 import { __decorate } from 'tslib';
 import { throwError, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import * as i1$5 from '@angular/common/http';
+import * as i1$4 from '@angular/common/http';
 import { HttpParams } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
@@ -384,13 +384,14 @@ class MvTableComponent {
         this.tempDatasource = this.tableGridData.data;
         this.dataSource = new MatTableDataSource(this.tableData.data);
         this.dataSource.sort = this.sort;
+        console.log(this.tableGridData);
     }
 }
 MvTableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvTableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTableComponent, selector: "app-mv-table", inputs: { tableGridData: "tableGridData" }, viewQueries: [{ propertyName: "table", first: true, predicate: MatTable, descendants: true, static: true }, { propertyName: "sort", first: true, predicate: MatSort, descendants: true, static: true }], ngImport: i0, template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n\r\n    <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n      {{tableData.metaData.display_names[i]}}\r\n    </th>\r\n    <td mat-cell *matCellDef=\"let element;let rowData=$implicit;\">{{element[i]}}</td>\r\n\r\n\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", dependencies: [{ kind: "component", type: i1$4.MatTable, selector: "mat-table, table[mat-table]", exportAs: ["matTable"] }, { kind: "directive", type: i1$4.MatHeaderCellDef, selector: "[matHeaderCellDef]" }, { kind: "directive", type: i1$4.MatHeaderRowDef, selector: "[matHeaderRowDef]", inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"] }, { kind: "directive", type: i1$4.MatCellDef, selector: "[matCellDef]" }, { kind: "directive", type: i1$4.MatRowDef, selector: "[matRowDef]", inputs: ["matRowDefColumns", "matRowDefWhen"] }, { kind: "directive", type: i1$4.MatHeaderCell, selector: "mat-header-cell, th[mat-header-cell]" }, { kind: "directive", type: i1$4.MatCell, selector: "mat-cell, td[mat-cell]" }, { kind: "component", type: i1$4.MatHeaderRow, selector: "mat-header-row, tr[mat-header-row]", exportAs: ["matHeaderRow"] }, { kind: "component", type: i1$4.MatRow, selector: "mat-row, tr[mat-row]", exportAs: ["matRow"] }] });
+MvTableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTableComponent, selector: "app-mv-table", inputs: { tableGridData: "tableGridData" }, viewQueries: [{ propertyName: "table", first: true, predicate: MatTable, descendants: true, static: true }, { propertyName: "sort", first: true, predicate: MatSort, descendants: true, static: true }], ngImport: i0, template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        {{tableData.metaData.display_names[i]}}\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: i2$2.MatTable, selector: "mat-table, table[mat-table]", exportAs: ["matTable"] }, { kind: "directive", type: i2$2.MatHeaderCellDef, selector: "[matHeaderCellDef]" }, { kind: "directive", type: i2$2.MatHeaderRowDef, selector: "[matHeaderRowDef]", inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"] }, { kind: "directive", type: i2$2.MatColumnDef, selector: "[matColumnDef]", inputs: ["sticky", "matColumnDef"] }, { kind: "directive", type: i2$2.MatCellDef, selector: "[matCellDef]" }, { kind: "directive", type: i2$2.MatRowDef, selector: "[matRowDef]", inputs: ["matRowDefColumns", "matRowDefWhen"] }, { kind: "directive", type: i2$2.MatHeaderCell, selector: "mat-header-cell, th[mat-header-cell]" }, { kind: "directive", type: i2$2.MatCell, selector: "mat-cell, td[mat-cell]" }, { kind: "component", type: i2$2.MatHeaderRow, selector: "mat-header-row, tr[mat-header-row]", exportAs: ["matHeaderRow"] }, { kind: "component", type: i2$2.MatRow, selector: "mat-row, tr[mat-row]", exportAs: ["matRow"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTableComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'app-mv-table', template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n\r\n    <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n      {{tableData.metaData.display_names[i]}}\r\n    </th>\r\n    <td mat-cell *matCellDef=\"let element;let rowData=$implicit;\">{{element[i]}}</td>\r\n\r\n\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n" }]
+            args: [{ selector: 'app-mv-table', template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        {{tableData.metaData.display_names[i]}}\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n" }]
         }], ctorParameters: function () { return []; }, propDecorators: { tableGridData: [{
                 type: Input
             }], table: [{
@@ -1674,14 +1675,14 @@ class ServiceAgent {
         document.body.removeChild(a);
     }
 }
-ServiceAgent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, deps: [{ token: i1$5.HttpClient }, { token: ClientConfig }, { token: ClientContext }], target: i0.ɵɵFactoryTarget.Injectable });
+ServiceAgent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, deps: [{ token: i1$4.HttpClient }, { token: ClientConfig }, { token: ClientContext }], target: i0.ɵɵFactoryTarget.Injectable });
 ServiceAgent.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], ctorParameters: function () { return [{ type: i1$5.HttpClient }, { type: ClientConfig }, { type: ClientContext }]; } });
+        }], ctorParameters: function () { return [{ type: i1$4.HttpClient }, { type: ClientConfig }, { type: ClientContext }]; } });
 
 /**
  * transposed column name is PRE + key to ensure that it does not clash with any existing attribute
@@ -1869,11 +1870,11 @@ class MessageService {
         this.snackBar.dismiss();
     }
 }
-MessageService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, deps: [{ token: i1$6.MatSnackBar }], target: i0.ɵɵFactoryTarget.Injectable });
+MessageService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, deps: [{ token: i1$5.MatSnackBar }], target: i0.ɵɵFactoryTarget.Injectable });
 MessageService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, decorators: [{
             type: Injectable
-        }], ctorParameters: function () { return [{ type: i1$6.MatSnackBar }]; } });
+        }], ctorParameters: function () { return [{ type: i1$5.MatSnackBar }]; } });
 
 class MvSecondaryButtonComponent {
     constructor() {

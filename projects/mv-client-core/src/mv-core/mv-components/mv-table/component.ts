@@ -40,7 +40,7 @@ export class MvTableComponent {
 		this.tempDatasource = this.tableGridData!.data
 		this.dataSource = new MatTableDataSource<any>(this.tableData.data);
 		this.dataSource.sort = this.sort;
-		
+		console.log(this.tableGridData)
 	
 		}
 	  }
