@@ -41,13 +41,14 @@ export class MvTableComponent {
 		console.log(this.tableGridData)
 		}
 
-	getColumnData(fd:FormData){
+	getColumnData(fd:FormData,tableData:TableMetaData){
 		fd.form.fields!.forEach(i=>{
 			if(i.controlType == 'Input') {
-			this.tableData.metaData.column_names.push(i.name)
-			this.tableData.metaData.display_names[i.name] = i.label
+			tableData.metaData.column_names.push(i.name)
+			tableData.metaData.display_names[i.name] = i.label
 			}
 		})
+		return tableData
 	}
 }
 

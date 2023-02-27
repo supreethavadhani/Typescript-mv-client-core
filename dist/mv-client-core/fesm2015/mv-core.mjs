@@ -391,13 +391,14 @@ class MvTableComponent {
         this.dataSource.sort = this.sort;
         console.log(this.tableGridData);
     }
-    getColumnData(fd) {
+    getColumnData(fd, tableData) {
         fd.form.fields.forEach(i => {
             if (i.controlType == 'Input') {
-                this.tableData.metaData.column_names.push(i.name);
-                this.tableData.metaData.display_names[i.name] = i.label;
+                tableData.metaData.column_names.push(i.name);
+                tableData.metaData.display_names[i.name] = i.label;
             }
         });
+        return tableData;
     }
 }
 MvTableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
