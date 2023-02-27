@@ -386,7 +386,14 @@ class MvTableComponent {
         this.dataSource.sort = this.sort;
         console.log(this.tableGridData);
     }
-    getColumnData(fd, tableData) {
+    getColumnData(fd) {
+        let tableData = {
+            data: [],
+            metaData: {
+                column_names: [],
+                display_names: {},
+            },
+        };
         fd.form.fields.forEach(i => {
             if (i.controlType == 'Input') {
                 tableData.metaData.column_names.push(i.name);

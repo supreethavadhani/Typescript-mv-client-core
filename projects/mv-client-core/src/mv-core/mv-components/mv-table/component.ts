@@ -41,7 +41,17 @@ export class MvTableComponent {
 		console.log(this.tableGridData)
 		}
 
-	getColumnData(fd:FormData,tableData:TableMetaData){
+	getColumnData(fd:FormData){
+		let tableData:TableMetaData = {
+			data: [],
+			metaData: {
+			  column_names:[
+			  ],
+			  display_names: { 
+			  },
+	  
+			},
+		  };
 		fd.form.fields!.forEach(i=>{
 			if(i.controlType == 'Input') {
 			tableData.metaData.column_names.push(i.name)
