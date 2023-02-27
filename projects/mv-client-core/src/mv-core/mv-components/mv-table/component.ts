@@ -2,6 +2,7 @@ import { Component, Input,ViewChild} from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource, MatTable, MatTableModule } from '@angular/material/table';
 import { Vo } from '../../mv-form-core/types';
+import { FormData } from '../../mv-form-core/formData';
 
 
 @Component({
@@ -28,10 +29,6 @@ export class MvTableComponent {
 	filters: {} = {};
 	columns: any;
 
-	constructor(){
-	}
-
-
 	update() {
 		this.isView = this.tableData.metaData.view ? 'pointer' : 'auto'
 		this.tableData = this.tableGridData;
@@ -42,9 +39,17 @@ export class MvTableComponent {
 		this.dataSource = new MatTableDataSource<any>(this.tableData.data);
 		this.dataSource.sort = this.sort;
 		console.log(this.tableGridData)
-	
 		}
-	  }
+
+	getColumnData(fd:FormData){
+		fd.form.fields!.forEach(i=>{
+			if(i.controlType == 'Input') {
+			this.tableData.metaData.column_names.push(i.name)
+			this.tableData.metaData.display_names[i.name] = i.label
+			}
+		})
+	}
+}
 
 export interface TableMetaData{
 	data:Vo[],
