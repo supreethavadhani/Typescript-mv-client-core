@@ -21,3 +21,4 @@ export * from './mv-core/mv-components/mv-checkbox/component';
 export * from './mv-core/mv-components/mv-primary-button/component';
 export * from './mv-core/mv-components/mv-secondary-button/component';
 export * from './mv-core/mv-components/mv-table/component';
+export * from './mv-core/mv-form-core/formService'

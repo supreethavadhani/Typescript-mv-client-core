@@ -1919,6 +1919,19 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                 type: Input
             }] } });
 
+class FormService {
+    static getFormFd(formName, sa, allServices) {
+        let form = allServices[formName].getInstance();
+        let fd = new FormData$1(form, sa);
+        return fd;
+    }
+}
+FormService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: FormService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
+FormService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: FormService });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: FormService, decorators: [{
+            type: Injectable
+        }] });
+
 /*
  * Public API Surface of mv-client-core
  */
@@ -1927,5 +1940,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { Form, FormData$1 as FormData, FormModule, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MessageService, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvSecondaryButtonComponent, MvTableComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
+export { Form, FormData$1 as FormData, FormModule, FormService, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MessageService, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvSecondaryButtonComponent, MvTableComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
 //# sourceMappingURL=mv-core.mjs.map
