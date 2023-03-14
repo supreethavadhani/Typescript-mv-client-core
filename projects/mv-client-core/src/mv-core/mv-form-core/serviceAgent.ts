@@ -121,7 +121,7 @@ export class ServiceAgent {
 						throw messages;
 					}
 				}
-				return data as Vo;
+				return data;
 			}
 
 			if (messages) {

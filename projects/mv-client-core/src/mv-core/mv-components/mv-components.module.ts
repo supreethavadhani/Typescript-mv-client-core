@@ -23,6 +23,7 @@ import { MvCheckboxComponent } from './mv-checkbox/component';
 import { MvDatePickerComponent } from './mv-datepicker/component';
 import { MvPrimaryButtonComponent } from './mv-primary-button/component';
 import { MvTableComponent } from './mv-table/component';
+import { MvSecondaryButtonComponent } from './mv-secondary-button/component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MvTableComponent } from './mv-table/component';
     MvCheckboxComponent,
     MvDatePickerComponent,
     MvPrimaryButtonComponent,
+    MvSecondaryButtonComponent,
     MvTableComponent,
   ],
   imports: [
@@ -49,7 +51,8 @@ import { MvTableComponent } from './mv-table/component';
     MvCheckboxComponent,
     MvDatePickerComponent,
     MvPrimaryButtonComponent,
-    MvTableComponent
+    MvTableComponent,
+    MvSecondaryButtonComponent,
   ]
 })
 export class MVComponentsModule {}

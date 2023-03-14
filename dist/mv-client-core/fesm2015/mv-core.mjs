@@ -423,6 +423,24 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                 args: [MatSort, { static: true }]
             }] } });
 
+class MvSecondaryButtonComponent {
+    constructor() {
+        this.isDisabled = false;
+    }
+}
+MvSecondaryButtonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSecondaryButtonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+MvSecondaryButtonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvSecondaryButtonComponent, selector: "app-mv-secondary-button", inputs: { name: "name", tooltip: "tooltip", isDisabled: "isDisabled" }, ngImport: i0, template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button>{{name}}</button>\r\n\r\n", dependencies: [{ kind: "component", type: i1$3.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSecondaryButtonComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'app-mv-secondary-button', template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button>{{name}}</button>\r\n\r\n" }]
+        }], ctorParameters: function () { return []; }, propDecorators: { name: [{
+                type: Input
+            }], tooltip: [{
+                type: Input
+            }], isDisabled: [{
+                type: Input
+            }] } });
+
 class MVComponentsModule {
 }
 MVComponentsModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MVComponentsModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
@@ -433,6 +451,7 @@ MVComponentsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", vers
         MvCheckboxComponent,
         MvDatePickerComponent,
         MvPrimaryButtonComponent,
+        MvSecondaryButtonComponent,
         MvTableComponent], imports: [CommonModule,
         MaterialModule,
         ReactiveFormsModule], exports: [MvTextboxComponent,
@@ -442,7 +461,8 @@ MVComponentsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", vers
         MvCheckboxComponent,
         MvDatePickerComponent,
         MvPrimaryButtonComponent,
-        MvTableComponent] });
+        MvTableComponent,
+        MvSecondaryButtonComponent] });
 MVComponentsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MVComponentsModule, imports: [CommonModule,
         MaterialModule,
         ReactiveFormsModule] });
@@ -457,6 +477,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                         MvCheckboxComponent,
                         MvDatePickerComponent,
                         MvPrimaryButtonComponent,
+                        MvSecondaryButtonComponent,
                         MvTableComponent,
                     ],
                     imports: [
@@ -472,7 +493,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                         MvCheckboxComponent,
                         MvDatePickerComponent,
                         MvPrimaryButtonComponent,
-                        MvTableComponent
+                        MvTableComponent,
+                        MvSecondaryButtonComponent,
                     ]
                 }]
         }] });
@@ -1900,24 +1922,6 @@ MessageService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", versi
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, decorators: [{
             type: Injectable
         }], ctorParameters: function () { return [{ type: i1$5.MatSnackBar }]; } });
-
-class MvSecondaryButtonComponent {
-    constructor() {
-        this.isDisabled = false;
-    }
-}
-MvSecondaryButtonComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSecondaryButtonComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvSecondaryButtonComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvSecondaryButtonComponent, selector: "app-mv-secondary-button", inputs: { name: "name", tooltip: "tooltip", isDisabled: "isDisabled" }, ngImport: i0, template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button>{{name}}</button>\r\n\r\n" });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSecondaryButtonComponent, decorators: [{
-            type: Component,
-            args: [{ selector: 'app-mv-secondary-button', template: "\r\n<button [disabled]=\"isDisabled\" mat-raised-button>{{name}}</button>\r\n\r\n" }]
-        }], ctorParameters: function () { return []; }, propDecorators: { name: [{
-                type: Input
-            }], tooltip: [{
-                type: Input
-            }], isDisabled: [{
-                type: Input
-            }] } });
 
 class FormService {
     static getFormFd(formName, sa, allServices) {
