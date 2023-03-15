@@ -34,7 +34,7 @@ mobileQuery: MediaQueryList;
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  emitPageRoute(selectedPage: string) {
+  emitPageRoute() {
 	// hello
 	console.log(this.navMenu)
   }
