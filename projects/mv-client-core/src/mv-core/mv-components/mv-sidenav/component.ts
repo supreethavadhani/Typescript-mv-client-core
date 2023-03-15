@@ -13,18 +13,22 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 
 export class MvSideNavComponent {
-	@Input() navMenu?: NavMenu;
+	@Input() navMenu?: NavMenuItem[];
 	@Input() appName: string = "MetadevApp";
 
 mobileQuery: MediaQueryList;
 
 
   private _mobileQueryListener: () => void;
-
+  
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQuery.addListener(this._mobileQueryListener);  
+	this.navMenu = [ {
+		"name":"no items in menu",
+		"routeTo": ""
+	} ,] 
   }
 
   ngOnDestroy(): void {
@@ -40,8 +44,4 @@ mobileQuery: MediaQueryList;
 interface NavMenuItem {
 	name:string,
 	routeTo: string
-}
-
-interface NavMenu {
-	menus: NavMenuItem[]
 }

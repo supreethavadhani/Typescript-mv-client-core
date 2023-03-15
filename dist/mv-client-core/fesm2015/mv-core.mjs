@@ -472,6 +472,10 @@ class MvSideNavComponent {
         this.mobileQuery = media.matchMedia('(max-width: 600px)');
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.mobileQuery.addListener(this._mobileQueryListener);
+        this.navMenu = [{
+                "name": "no items in menu",
+                "routeTo": ""
+            },];
     }
     ngOnDestroy() {
         this.mobileQuery.removeListener(this._mobileQueryListener);
