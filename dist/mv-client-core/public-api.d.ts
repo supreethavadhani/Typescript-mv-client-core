@@ -18,4 +18,5 @@ export * from './mv-core/mv-components/mv-primary-button/component';
 export * from './mv-core/mv-components/mv-secondary-button/component';
 export * from './mv-core/mv-components/mv-table/component';
 export * from './mv-core/mv-form-core/formService';
+export * from './mv-core/mv-components/mv-sidenav/component';
 //# sourceMappingURL=public-api.d.ts.map

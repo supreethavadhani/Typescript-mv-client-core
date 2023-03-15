@@ -29,6 +29,10 @@ import {
   MatSnackBarModule
 } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 const materialModules = [
   MatFormFieldModule,
@@ -41,6 +45,10 @@ const materialModules = [
   MatButtonModule,
   MatSnackBarModule,
   MatTableModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatListModule,
+  MatIconModule
 ];
 
 @NgModule({

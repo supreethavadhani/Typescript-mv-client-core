@@ -9,9 +9,13 @@ import * as i7 from "@angular/material/tooltip";
 import * as i8 from "@angular/material/button";
 import * as i9 from "@angular/material/snack-bar";
 import * as i10 from "@angular/material/table";
+import * as i11 from "@angular/material/sidenav";
+import * as i12 from "@angular/material/toolbar";
+import * as i13 from "@angular/material/list";
+import * as i14 from "@angular/material/icon";
 export declare class MaterialModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<MaterialModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<MaterialModule, never, [typeof i1.MatFormFieldModule, typeof i2.MatInputModule, typeof i3.MatSelectModule, typeof i4.MatCheckboxModule, typeof i5.MatCardModule, typeof i6.MatDatepickerModule, typeof i7.MatTooltipModule, typeof i8.MatButtonModule, typeof i9.MatSnackBarModule, typeof i10.MatTableModule], [typeof i1.MatFormFieldModule, typeof i2.MatInputModule, typeof i3.MatSelectModule, typeof i4.MatCheckboxModule, typeof i5.MatCardModule, typeof i6.MatDatepickerModule, typeof i7.MatTooltipModule, typeof i8.MatButtonModule, typeof i9.MatSnackBarModule, typeof i10.MatTableModule]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<MaterialModule, never, [typeof i1.MatFormFieldModule, typeof i2.MatInputModule, typeof i3.MatSelectModule, typeof i4.MatCheckboxModule, typeof i5.MatCardModule, typeof i6.MatDatepickerModule, typeof i7.MatTooltipModule, typeof i8.MatButtonModule, typeof i9.MatSnackBarModule, typeof i10.MatTableModule, typeof i11.MatSidenavModule, typeof i12.MatToolbarModule, typeof i13.MatListModule, typeof i14.MatIconModule], [typeof i1.MatFormFieldModule, typeof i2.MatInputModule, typeof i3.MatSelectModule, typeof i4.MatCheckboxModule, typeof i5.MatCardModule, typeof i6.MatDatepickerModule, typeof i7.MatTooltipModule, typeof i8.MatButtonModule, typeof i9.MatSnackBarModule, typeof i10.MatTableModule, typeof i11.MatSidenavModule, typeof i12.MatToolbarModule, typeof i13.MatListModule, typeof i14.MatIconModule]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<MaterialModule>;
 }
 //# sourceMappingURL=material.module.d.ts.map
