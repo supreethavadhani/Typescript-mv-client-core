@@ -4,35 +4,68 @@ import * as i5 from '@angular/forms';
 import { ReactiveFormsModule, FormsModule, FormGroup, FormControl } from '@angular/forms';
 import * as i1 from '@angular/common';
 import { CommonModule } from '@angular/common';
-import * as i2 from '@angular/material/form-field';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import * as i3 from '@angular/material/input';
-import { MatInputModule } from '@angular/material/input';
-import * as i3$1 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import { A11yModule } from '@angular/cdk/a11y';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { PortalModule } from '@angular/cdk/portal';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import * as i1$3 from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import * as i2$1 from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card';
 import * as i1$2 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import * as i5$1 from '@angular/material/datepicker';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatStepperModule } from '@angular/material/stepper';
+import * as i3$1 from '@angular/material/datepicker';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import * as i1$3 from '@angular/material/button';
-import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
+import * as i2 from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import * as i4 from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import * as i5$1 from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import * as i1$1 from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import * as i4$1 from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import * as i6 from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import * as i1$6 from '@angular/material/snack-bar';
 import { MatSnackBarModule, MatSnackBarConfig } from '@angular/material/snack-bar';
-import * as i2$2 from '@angular/material/table';
+import * as i2$2 from '@angular/material/sort';
+import { MatSortModule, MatSort } from '@angular/material/sort';
+import * as i3$2 from '@angular/material/table';
 import { MatTableModule, MatTableDataSource, MatTable } from '@angular/material/table';
-import * as i4$1 from '@angular/material/sidenav';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import * as i5$2 from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs';
+import * as i7 from '@angular/material/toolbar';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import * as i6 from '@angular/material/list';
-import { MatListModule } from '@angular/material/list';
-import * as i4 from '@angular/material/icon';
-import { MatIconModule } from '@angular/material/icon';
-import * as i1$1 from '@angular/material/core';
-import { MatSort } from '@angular/material/sort';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeModule } from '@angular/material/tree';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkMenuModule } from '@angular/cdk/menu';
+import { DialogModule } from '@angular/cdk/dialog';
+import * as i3 from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import * as i1$4 from '@angular/cdk/layout';
 import { __decorate } from 'tslib';
 import { throwError, Observable } from 'rxjs';
@@ -54,65 +87,201 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
         }], ctorParameters: function () { return []; } });
 
 const materialModules = [
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    MatCardModule,
-    MatDatepickerModule,
-    MatTooltipModule,
+    A11yModule,
+    CdkAccordionModule,
+    ClipboardModule,
+    CdkMenuModule,
+    CdkStepperModule,
+    CdkTableModule,
+    CdkTreeModule,
+    DragDropModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
     MatButtonModule,
-    MatSnackBarModule,
-    MatTableModule,
-    MatSidenavModule,
-    MatToolbarModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
     MatListModule,
-    MatIconModule
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+    OverlayModule,
+    PortalModule,
+    ScrollingModule,
+    DialogModule,
+    MatFormFieldModule
 ];
 class MaterialModule {
 }
 MaterialModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-MaterialModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, imports: [MatFormFieldModule,
-        MatInputModule,
-        MatSelectModule,
-        MatCheckboxModule,
-        MatCardModule,
-        MatDatepickerModule,
-        MatTooltipModule,
+MaterialModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, imports: [A11yModule,
+        CdkAccordionModule,
+        ClipboardModule,
+        CdkMenuModule,
+        CdkStepperModule,
+        CdkTableModule,
+        CdkTreeModule,
+        DragDropModule,
+        MatAutocompleteModule,
+        MatBadgeModule,
+        MatBottomSheetModule,
         MatButtonModule,
-        MatSnackBarModule,
-        MatTableModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatListModule,
-        MatIconModule], exports: [MatFormFieldModule,
-        MatInputModule,
-        MatSelectModule,
-        MatCheckboxModule,
+        MatButtonToggleModule,
         MatCardModule,
-        MatDatepickerModule,
-        MatTooltipModule,
-        MatButtonModule,
-        MatSnackBarModule,
-        MatTableModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatListModule,
-        MatIconModule] });
-MaterialModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, imports: [materialModules, MatFormFieldModule,
-        MatInputModule,
-        MatSelectModule,
         MatCheckboxModule,
-        MatCardModule,
+        MatChipsModule,
+        MatStepperModule,
         MatDatepickerModule,
-        MatTooltipModule,
-        MatButtonModule,
-        MatSnackBarModule,
-        MatTableModule,
-        MatSidenavModule,
-        MatToolbarModule,
+        MatDialogModule,
+        MatDividerModule,
+        MatExpansionModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
         MatListModule,
-        MatIconModule] });
+        MatMenuModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatTooltipModule,
+        MatTreeModule,
+        OverlayModule,
+        PortalModule,
+        ScrollingModule,
+        DialogModule,
+        MatFormFieldModule], exports: [A11yModule,
+        CdkAccordionModule,
+        ClipboardModule,
+        CdkMenuModule,
+        CdkStepperModule,
+        CdkTableModule,
+        CdkTreeModule,
+        DragDropModule,
+        MatAutocompleteModule,
+        MatBadgeModule,
+        MatBottomSheetModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatStepperModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        MatDividerModule,
+        MatExpansionModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatMenuModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatTooltipModule,
+        MatTreeModule,
+        OverlayModule,
+        PortalModule,
+        ScrollingModule,
+        DialogModule,
+        MatFormFieldModule] });
+MaterialModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, imports: [materialModules, A11yModule,
+        CdkAccordionModule,
+        ClipboardModule,
+        CdkMenuModule,
+        CdkStepperModule,
+        CdkTableModule,
+        CdkTreeModule,
+        DragDropModule,
+        MatAutocompleteModule,
+        MatBadgeModule,
+        MatBottomSheetModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatStepperModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        MatDividerModule,
+        MatExpansionModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatMenuModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatTooltipModule,
+        MatTreeModule,
+        OverlayModule,
+        PortalModule,
+        ScrollingModule,
+        DialogModule,
+        MatFormFieldModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MaterialModule, decorators: [{
             type: NgModule,
             args: [{
@@ -161,7 +330,7 @@ class MvTextboxComponent {
     }
 }
 MvTextboxComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTextboxComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvTextboxComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTextboxComponent, selector: "app-mv-textbox", inputs: { field: "field", formData: "formData", type: "type" }, outputs: { valueChange: "valueChange" }, ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n  <mat-label>{{field?.label}} <span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n  <span matPrefix>{{field?.prefix}}</span>\r\n  <input *ngIf=\"control\" [formControl]=\"control\" matInput (input)=\"valueChangeDetector($event)\"\r\n    [readonly]=\"field?.isEditable\" placeholder=\"{{field?.placeHolder}}\">\r\n  <mat-hint>{{field?.hint}}</mat-hint>\r\n  <mat-icon matSuffix>{{field?.icon}}</mat-icon>\r\n  <mat-error>\r\n    <div *ngIf=\"this.control?.errors\">\r\n      {{this.field?.errorId}}\r\n    </div>\r\n  </mat-error>\r\n", dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "directive", type: i2.MatError, selector: "mat-error", inputs: ["id"] }, { kind: "component", type: i2.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i2.MatHint, selector: "mat-hint", inputs: ["align", "id"] }, { kind: "directive", type: i2.MatLabel, selector: "mat-label" }, { kind: "directive", type: i2.MatPrefix, selector: "[matPrefix]" }, { kind: "directive", type: i2.MatSuffix, selector: "[matSuffix]" }, { kind: "directive", type: i3.MatInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly"], exportAs: ["matInput"] }, { kind: "component", type: i4.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "directive", type: i5.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
+MvTextboxComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTextboxComponent, selector: "app-mv-textbox", inputs: { field: "field", formData: "formData", type: "type" }, outputs: { valueChange: "valueChange" }, ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n  <mat-label>{{field?.label}} <span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n  <span matPrefix>{{field?.prefix}}</span>\r\n  <input *ngIf=\"control\" [formControl]=\"control\" matInput (input)=\"valueChangeDetector($event)\"\r\n    [readonly]=\"field?.isEditable\" placeholder=\"{{field?.placeHolder}}\">\r\n  <mat-hint>{{field?.hint}}</mat-hint>\r\n  <mat-icon matSuffix>{{field?.icon}}</mat-icon>\r\n  <mat-error>\r\n    <div *ngIf=\"this.control?.errors\">\r\n      {{this.field?.errorId}}\r\n    </div>\r\n  </mat-error>\r\n", dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i2.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "directive", type: i3.MatError, selector: "mat-error", inputs: ["id"] }, { kind: "component", type: i3.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i3.MatHint, selector: "mat-hint", inputs: ["align", "id"] }, { kind: "directive", type: i3.MatLabel, selector: "mat-label" }, { kind: "directive", type: i3.MatPrefix, selector: "[matPrefix]" }, { kind: "directive", type: i3.MatSuffix, selector: "[matSuffix]" }, { kind: "directive", type: i4.MatInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly"], exportAs: ["matInput"] }, { kind: "directive", type: i5.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTextboxComponent, decorators: [{
             type: Component,
             args: [{ selector: 'app-mv-textbox', template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n  <mat-label>{{field?.label}} <span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n  <span matPrefix>{{field?.prefix}}</span>\r\n  <input *ngIf=\"control\" [formControl]=\"control\" matInput (input)=\"valueChangeDetector($event)\"\r\n    [readonly]=\"field?.isEditable\" placeholder=\"{{field?.placeHolder}}\">\r\n  <mat-hint>{{field?.hint}}</mat-hint>\r\n  <mat-icon matSuffix>{{field?.icon}}</mat-icon>\r\n  <mat-error>\r\n    <div *ngIf=\"this.control?.errors\">\r\n      {{this.field?.errorId}}\r\n    </div>\r\n  </mat-error>\r\n" }]
@@ -208,7 +377,7 @@ class MvDropDownComponent {
     }
 }
 MvDropDownComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvDropDownComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvDropDownComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvDropDownComponent, selector: "app-mv-dropdown", inputs: { field: "field", formData: "formData", type: "type" }, outputs: { valueChange: "valueChange", changeListener: "changeListener" }, ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n  <mat-label>{{field?.label}}<span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n  <mat-select disableOptionCentering=\"true\" (selectionChange)=\"currentValue($event.value);\"\r\n    [required]=\"field?.isRequired\" placeholder=\"{{field?.placeHolder}}\" [formControl]=\"formControl\">\r\n    <mat-option *ngIf=\"!field?.isRequired\">None</mat-option>\r\n    <mat-option *ngFor=\"let list of formData?.lists[field?.name]\" [(value)]=\"list.value\">\r\n      {{list.text}}\r\n    </mat-option>\r\n  </mat-select>\r\n  <mat-error>\r\n    <div *ngIf=\"this.formControl?.errors\">\r\n      {{this.field.errorId}}\r\n    </div>\r\n  </mat-error>\r\n</mat-form-field>\r\n", dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "directive", type: i2.MatError, selector: "mat-error", inputs: ["id"] }, { kind: "component", type: i2.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i2.MatLabel, selector: "mat-label" }, { kind: "component", type: i3$1.MatSelect, selector: "mat-select", inputs: ["disabled", "disableRipple", "tabIndex"], exportAs: ["matSelect"] }, { kind: "component", type: i1$1.MatOption, selector: "mat-option", exportAs: ["matOption"] }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.RequiredValidator, selector: ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]", inputs: ["required"] }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
+MvDropDownComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvDropDownComponent, selector: "app-mv-dropdown", inputs: { field: "field", formData: "formData", type: "type" }, outputs: { valueChange: "valueChange", changeListener: "changeListener" }, ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n  <mat-label>{{field?.label}}<span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n  <mat-select disableOptionCentering=\"true\" (selectionChange)=\"currentValue($event.value);\"\r\n    [required]=\"field?.isRequired\" placeholder=\"{{field?.placeHolder}}\" [formControl]=\"formControl\">\r\n    <mat-option *ngIf=\"!field?.isRequired\">None</mat-option>\r\n    <mat-option *ngFor=\"let list of formData?.lists[field?.name]\" [(value)]=\"list.value\">\r\n      {{list.text}}\r\n    </mat-option>\r\n  </mat-select>\r\n  <mat-error>\r\n    <div *ngIf=\"this.formControl?.errors\">\r\n      {{this.field.errorId}}\r\n    </div>\r\n  </mat-error>\r\n</mat-form-field>\r\n", dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i1$1.MatOption, selector: "mat-option", exportAs: ["matOption"] }, { kind: "directive", type: i3.MatError, selector: "mat-error", inputs: ["id"] }, { kind: "component", type: i3.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i3.MatLabel, selector: "mat-label" }, { kind: "component", type: i4$1.MatSelect, selector: "mat-select", inputs: ["disabled", "disableRipple", "tabIndex"], exportAs: ["matSelect"] }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.RequiredValidator, selector: ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]", inputs: ["required"] }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvDropDownComponent, decorators: [{
             type: Component,
             args: [{ selector: 'app-mv-dropdown', template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n  <mat-label>{{field?.label}}<span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n  <mat-select disableOptionCentering=\"true\" (selectionChange)=\"currentValue($event.value);\"\r\n    [required]=\"field?.isRequired\" placeholder=\"{{field?.placeHolder}}\" [formControl]=\"formControl\">\r\n    <mat-option *ngIf=\"!field?.isRequired\">None</mat-option>\r\n    <mat-option *ngFor=\"let list of formData?.lists[field?.name]\" [(value)]=\"list.value\">\r\n      {{list.text}}\r\n    </mat-option>\r\n  </mat-select>\r\n  <mat-error>\r\n    <div *ngIf=\"this.formControl?.errors\">\r\n      {{this.field.errorId}}\r\n    </div>\r\n  </mat-error>\r\n</mat-form-field>\r\n" }]
@@ -257,7 +426,7 @@ class MvTextareaComponent {
     }
 }
 MvTextareaComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTextareaComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvTextareaComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTextareaComponent, selector: "app-mv-textarea", inputs: { field: "field", formData: "formData", type: "type" }, outputs: { valueChange: "valueChange" }, ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n\t<mat-label>{{field?.label}} <span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n\t<span matPrefix>{{field?.prefix}}</span>\r\n\t<textarea [formControl]=\"control\" matInput (input)=\"valueChangeDetector($event)\"\r\n\t\t[required]=\"field?.isRequired\" [readonly]=\"field?.isEditable\" placeholder=\"{{field?.placeHolder}}\"> </textarea>\r\n\t<mat-hint>{{field?.hint}}</mat-hint>\r\n\t<mat-icon matSuffix>{{field?.icon}}</mat-icon>\r\n\t<mat-error>\r\n\t\t<div *ngIf=\"this.control?.errors\">\r\n\t\t\t{{this.field.errorId}}\r\n\t\t</div>\r\n\t</mat-error>\r\n</mat-form-field>", dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "directive", type: i2.MatError, selector: "mat-error", inputs: ["id"] }, { kind: "component", type: i2.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i2.MatHint, selector: "mat-hint", inputs: ["align", "id"] }, { kind: "directive", type: i2.MatLabel, selector: "mat-label" }, { kind: "directive", type: i2.MatPrefix, selector: "[matPrefix]" }, { kind: "directive", type: i2.MatSuffix, selector: "[matSuffix]" }, { kind: "directive", type: i3.MatInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly"], exportAs: ["matInput"] }, { kind: "component", type: i4.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "directive", type: i5.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.RequiredValidator, selector: ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]", inputs: ["required"] }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
+MvTextareaComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTextareaComponent, selector: "app-mv-textarea", inputs: { field: "field", formData: "formData", type: "type" }, outputs: { valueChange: "valueChange" }, ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n\t<mat-label>{{field?.label}} <span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n\t<span matPrefix>{{field?.prefix}}</span>\r\n\t<textarea [formControl]=\"control\" matInput (input)=\"valueChangeDetector($event)\"\r\n\t\t[required]=\"field?.isRequired\" [readonly]=\"field?.isEditable\" placeholder=\"{{field?.placeHolder}}\"> </textarea>\r\n\t<mat-hint>{{field?.hint}}</mat-hint>\r\n\t<mat-icon matSuffix>{{field?.icon}}</mat-icon>\r\n\t<mat-error>\r\n\t\t<div *ngIf=\"this.control?.errors\">\r\n\t\t\t{{this.field.errorId}}\r\n\t\t</div>\r\n\t</mat-error>\r\n</mat-form-field>", dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i2.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "directive", type: i3.MatError, selector: "mat-error", inputs: ["id"] }, { kind: "component", type: i3.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i3.MatHint, selector: "mat-hint", inputs: ["align", "id"] }, { kind: "directive", type: i3.MatLabel, selector: "mat-label" }, { kind: "directive", type: i3.MatPrefix, selector: "[matPrefix]" }, { kind: "directive", type: i3.MatSuffix, selector: "[matSuffix]" }, { kind: "directive", type: i4.MatInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly"], exportAs: ["matInput"] }, { kind: "directive", type: i5.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.RequiredValidator, selector: ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]", inputs: ["required"] }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTextareaComponent, decorators: [{
             type: Component,
             args: [{ selector: 'app-mv-textarea', template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n\t<mat-label>{{field?.label}} <span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n\t<span matPrefix>{{field?.prefix}}</span>\r\n\t<textarea [formControl]=\"control\" matInput (input)=\"valueChangeDetector($event)\"\r\n\t\t[required]=\"field?.isRequired\" [readonly]=\"field?.isEditable\" placeholder=\"{{field?.placeHolder}}\"> </textarea>\r\n\t<mat-hint>{{field?.hint}}</mat-hint>\r\n\t<mat-icon matSuffix>{{field?.icon}}</mat-icon>\r\n\t<mat-error>\r\n\t\t<div *ngIf=\"this.control?.errors\">\r\n\t\t\t{{this.field.errorId}}\r\n\t\t</div>\r\n\t</mat-error>\r\n</mat-form-field>" }]
@@ -365,7 +534,7 @@ class MvDatePickerComponent {
     }
 }
 MvDatePickerComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvDatePickerComponent, deps: [{ token: i1$1.DateAdapter }], target: i0.ɵɵFactoryTarget.Component });
-MvDatePickerComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvDatePickerComponent, selector: "app-mv-date", inputs: { field: "field", formData: "formData" }, providers: [], ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n\t<mat-label>{{field?.label}}<span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n\t<input matInput [matDatepicker]=\"picker\" [required]=\"field?.isRequired\" [formControl]=formControl\r\n\t\t(dateChange)=\"dateChange($event)\">\r\n\t<mat-datepicker-toggle matSuffix [for]=\"picker\" style=\"outline: none;\"></mat-datepicker-toggle>\r\n\t<mat-datepicker style=\"outline: none;\" #picker></mat-datepicker>\r\n</mat-form-field>", dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i2.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i2.MatLabel, selector: "mat-label" }, { kind: "directive", type: i2.MatSuffix, selector: "[matSuffix]" }, { kind: "directive", type: i3.MatInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly"], exportAs: ["matInput"] }, { kind: "component", type: i5$1.MatDatepicker, selector: "mat-datepicker", exportAs: ["matDatepicker"] }, { kind: "directive", type: i5$1.MatDatepickerInput, selector: "input[matDatepicker]", inputs: ["matDatepicker", "min", "max", "matDatepickerFilter"], exportAs: ["matDatepickerInput"] }, { kind: "component", type: i5$1.MatDatepickerToggle, selector: "mat-datepicker-toggle", inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"], exportAs: ["matDatepickerToggle"] }, { kind: "directive", type: i5.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.RequiredValidator, selector: ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]", inputs: ["required"] }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
+MvDatePickerComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvDatePickerComponent, selector: "app-mv-date", inputs: { field: "field", formData: "formData" }, providers: [], ngImport: i0, template: "<mat-form-field class=\"col-md-12\" appearance=\"fill\">\r\n\t<mat-label>{{field?.label}}<span *ngIf=\"!field?.isRequired\" class=\"optional\">(optional)</span></mat-label>\r\n\t<input matInput [matDatepicker]=\"picker\" [required]=\"field?.isRequired\" [formControl]=formControl\r\n\t\t(dateChange)=\"dateChange($event)\">\r\n\t<mat-datepicker-toggle matSuffix [for]=\"picker\" style=\"outline: none;\"></mat-datepicker-toggle>\r\n\t<mat-datepicker style=\"outline: none;\" #picker></mat-datepicker>\r\n</mat-form-field>", dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i3$1.MatDatepicker, selector: "mat-datepicker", exportAs: ["matDatepicker"] }, { kind: "directive", type: i3$1.MatDatepickerInput, selector: "input[matDatepicker]", inputs: ["matDatepicker", "min", "max", "matDatepickerFilter"], exportAs: ["matDatepickerInput"] }, { kind: "component", type: i3$1.MatDatepickerToggle, selector: "mat-datepicker-toggle", inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"], exportAs: ["matDatepickerToggle"] }, { kind: "component", type: i3.MatFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i3.MatLabel, selector: "mat-label" }, { kind: "directive", type: i3.MatSuffix, selector: "[matSuffix]" }, { kind: "directive", type: i4.MatInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly"], exportAs: ["matInput"] }, { kind: "directive", type: i5.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i5.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5.RequiredValidator, selector: ":not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]", inputs: ["required"] }, { kind: "directive", type: i5.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
 MvDatePickerComponent.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvDatePickerComponent });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvDatePickerComponent, decorators: [{
             type: Injectable
@@ -434,7 +603,7 @@ class MvTableComponent {
     }
 }
 MvTableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvTableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTableComponent, selector: "app-mv-table", inputs: { tableGridData: "tableGridData" }, viewQueries: [{ propertyName: "table", first: true, predicate: MatTable, descendants: true, static: true }, { propertyName: "sort", first: true, predicate: MatSort, descendants: true, static: true }], ngImport: i0, template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        {{tableData.metaData.display_names[i]}}\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", styles: [".table-container{height:auto;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Roboto-Medium!important;font-size:1.1vw;color:#000;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: i2$2.MatTable, selector: "mat-table, table[mat-table]", exportAs: ["matTable"] }, { kind: "directive", type: i2$2.MatHeaderCellDef, selector: "[matHeaderCellDef]" }, { kind: "directive", type: i2$2.MatHeaderRowDef, selector: "[matHeaderRowDef]", inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"] }, { kind: "directive", type: i2$2.MatColumnDef, selector: "[matColumnDef]", inputs: ["sticky", "matColumnDef"] }, { kind: "directive", type: i2$2.MatCellDef, selector: "[matCellDef]" }, { kind: "directive", type: i2$2.MatRowDef, selector: "[matRowDef]", inputs: ["matRowDefColumns", "matRowDefWhen"] }, { kind: "directive", type: i2$2.MatHeaderCell, selector: "mat-header-cell, th[mat-header-cell]" }, { kind: "directive", type: i2$2.MatCell, selector: "mat-cell, td[mat-cell]" }, { kind: "component", type: i2$2.MatHeaderRow, selector: "mat-header-row, tr[mat-header-row]", exportAs: ["matHeaderRow"] }, { kind: "component", type: i2$2.MatRow, selector: "mat-row, tr[mat-row]", exportAs: ["matRow"] }] });
+MvTableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTableComponent, selector: "app-mv-table", inputs: { tableGridData: "tableGridData" }, viewQueries: [{ propertyName: "table", first: true, predicate: MatTable, descendants: true, static: true }, { propertyName: "sort", first: true, predicate: MatSort, descendants: true, static: true }], ngImport: i0, template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        {{tableData.metaData.display_names[i]}}\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", styles: [".table-container{height:auto;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Roboto-Medium!important;font-size:1.1vw;color:#000;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i2$2.MatSort, selector: "[matSort]", inputs: ["matSortDisabled", "matSortActive", "matSortStart", "matSortDirection", "matSortDisableClear"], outputs: ["matSortChange"], exportAs: ["matSort"] }, { kind: "component", type: i2$2.MatSortHeader, selector: "[mat-sort-header]", inputs: ["disabled", "mat-sort-header", "arrowPosition", "start", "sortActionDescription", "disableClear"], exportAs: ["matSortHeader"] }, { kind: "component", type: i3$2.MatTable, selector: "mat-table, table[mat-table]", exportAs: ["matTable"] }, { kind: "directive", type: i3$2.MatHeaderCellDef, selector: "[matHeaderCellDef]" }, { kind: "directive", type: i3$2.MatHeaderRowDef, selector: "[matHeaderRowDef]", inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"] }, { kind: "directive", type: i3$2.MatColumnDef, selector: "[matColumnDef]", inputs: ["sticky", "matColumnDef"] }, { kind: "directive", type: i3$2.MatCellDef, selector: "[matCellDef]" }, { kind: "directive", type: i3$2.MatRowDef, selector: "[matRowDef]", inputs: ["matRowDefColumns", "matRowDefWhen"] }, { kind: "directive", type: i3$2.MatHeaderCell, selector: "mat-header-cell, th[mat-header-cell]" }, { kind: "directive", type: i3$2.MatCell, selector: "mat-cell, td[mat-cell]" }, { kind: "component", type: i3$2.MatHeaderRow, selector: "mat-header-row, tr[mat-header-row]", exportAs: ["matHeaderRow"] }, { kind: "component", type: i3$2.MatRow, selector: "mat-row, tr[mat-row]", exportAs: ["matRow"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTableComponent, decorators: [{
             type: Component,
             args: [{ selector: 'app-mv-table', template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        {{tableData.metaData.display_names[i]}}\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", styles: [".table-container{height:auto;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Roboto-Medium!important;font-size:1.1vw;color:#000;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"] }]
@@ -482,13 +651,14 @@ class MvSideNavComponent {
     }
     emitPageRoute(selectedPage) {
         // hello
+        console.log(this.navMenu);
     }
 }
 MvSideNavComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSideNavComponent, deps: [{ token: i0.ChangeDetectorRef }, { token: i1$4.MediaMatcher }], target: i0.ɵɵFactoryTarget.Component });
-MvSideNavComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvSideNavComponent, selector: "app-mv-sidenav", inputs: { navMenu: "navMenu", appName: "appName" }, ngImport: i0, template: "<div class=\"nav-container\" [class.example-is-mobile]=\"mobileQuery.matches\">\r\n  <mat-toolbar color=\"primary\" class=\"nav-toolbar\">\r\n    <button mat-icon-button (click)=\"snav.toggle()\"><mat-icon>menu</mat-icon></button>\r\n    <h1 class=\"app-name\">{{appName}}</h1>\r\n  </mat-toolbar>\r\n\r\n  <mat-sidenav-container class=\"nav-sidenav-container\"\r\n                         [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n    <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                 [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\">\r\n      <mat-nav-list>\r\n        <a mat-list-item *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\">{{nav.name}} </a>\r\n      </mat-nav-list>\r\n    </mat-sidenav>\r\n  </mat-sidenav-container>\r\n</div>", styles: [".table-container{height:auto;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Roboto-Medium!important;font-size:1.1vw;color:#000;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: i1$3.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i4$1.MatSidenav, selector: "mat-sidenav", inputs: ["fixedInViewport", "fixedTopGap", "fixedBottomGap"], exportAs: ["matSidenav"] }, { kind: "component", type: i4$1.MatSidenavContainer, selector: "mat-sidenav-container", exportAs: ["matSidenavContainer"] }, { kind: "component", type: i5$2.MatToolbar, selector: "mat-toolbar", inputs: ["color"], exportAs: ["matToolbar"] }, { kind: "component", type: i6.MatNavList, selector: "mat-nav-list", inputs: ["disableRipple", "disabled"], exportAs: ["matNavList"] }, { kind: "component", type: i6.MatListItem, selector: "mat-list-item, a[mat-list-item], button[mat-list-item]", inputs: ["disableRipple", "disabled"], exportAs: ["matListItem"] }, { kind: "component", type: i4.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }] });
+MvSideNavComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvSideNavComponent, selector: "app-mv-sidenav", inputs: { navMenu: "navMenu", appName: "appName" }, ngImport: i0, template: "<div class=\"nav-container\" [class.example-is-mobile]=\"mobileQuery.matches\">\r\n  <mat-toolbar color=\"primary\" class=\"nav-toolbar\">\r\n    <button mat-icon-button (click)=\"snav.toggle()\"><mat-icon>menu</mat-icon></button>\r\n    <h1 class=\"app-name\">{{appName}}</h1>\r\n  </mat-toolbar>\r\n\r\n  <mat-sidenav-container class=\"nav-sidenav-container\"\r\n                         [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n    <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                 [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\">\r\n      <mat-nav-list>\r\n        <a mat-list-item *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\">{{nav.name}} </a>\r\n      </mat-nav-list>\r\n    </mat-sidenav>\r\n  </mat-sidenav-container>\r\n</div>", dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: i1$3.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i2.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "component", type: i5$1.MatNavList, selector: "mat-nav-list", inputs: ["disableRipple", "disabled"], exportAs: ["matNavList"] }, { kind: "component", type: i5$1.MatListItem, selector: "mat-list-item, a[mat-list-item], button[mat-list-item]", inputs: ["disableRipple", "disabled"], exportAs: ["matListItem"] }, { kind: "component", type: i6.MatSidenav, selector: "mat-sidenav", inputs: ["fixedInViewport", "fixedTopGap", "fixedBottomGap"], exportAs: ["matSidenav"] }, { kind: "component", type: i6.MatSidenavContainer, selector: "mat-sidenav-container", exportAs: ["matSidenavContainer"] }, { kind: "component", type: i7.MatToolbar, selector: "mat-toolbar", inputs: ["color"], exportAs: ["matToolbar"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSideNavComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'app-mv-sidenav', template: "<div class=\"nav-container\" [class.example-is-mobile]=\"mobileQuery.matches\">\r\n  <mat-toolbar color=\"primary\" class=\"nav-toolbar\">\r\n    <button mat-icon-button (click)=\"snav.toggle()\"><mat-icon>menu</mat-icon></button>\r\n    <h1 class=\"app-name\">{{appName}}</h1>\r\n  </mat-toolbar>\r\n\r\n  <mat-sidenav-container class=\"nav-sidenav-container\"\r\n                         [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n    <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                 [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\">\r\n      <mat-nav-list>\r\n        <a mat-list-item *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\">{{nav.name}} </a>\r\n      </mat-nav-list>\r\n    </mat-sidenav>\r\n  </mat-sidenav-container>\r\n</div>", styles: [".table-container{height:auto;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Roboto-Medium!important;font-size:1.1vw;color:#000;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"] }]
+            args: [{ selector: 'app-mv-sidenav', template: "<div class=\"nav-container\" [class.example-is-mobile]=\"mobileQuery.matches\">\r\n  <mat-toolbar color=\"primary\" class=\"nav-toolbar\">\r\n    <button mat-icon-button (click)=\"snav.toggle()\"><mat-icon>menu</mat-icon></button>\r\n    <h1 class=\"app-name\">{{appName}}</h1>\r\n  </mat-toolbar>\r\n\r\n  <mat-sidenav-container class=\"nav-sidenav-container\"\r\n                         [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n    <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                 [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\">\r\n      <mat-nav-list>\r\n        <a mat-list-item *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\">{{nav.name}} </a>\r\n      </mat-nav-list>\r\n    </mat-sidenav>\r\n  </mat-sidenav-container>\r\n</div>" }]
         }], ctorParameters: function () { return [{ type: i0.ChangeDetectorRef }, { type: i1$4.MediaMatcher }]; }, propDecorators: { navMenu: [{
                 type: Input
             }], appName: [{
