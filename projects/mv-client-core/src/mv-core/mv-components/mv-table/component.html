@@ -1,4 +1,8 @@
 <div class="table-container" id="tableContainer">
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput placeholder="Search Table" #input>
+</mat-form-field>
   <table mat-table [dataSource]="dataSource" matSort>
 
     <ng-container *ngFor="let i of tableData.metaData.column_names; let index=index" matColumnDef="{{i}}">
