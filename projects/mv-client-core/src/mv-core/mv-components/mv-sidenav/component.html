@@ -1,11 +1,8 @@
-<div class="nav-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="nav-toolbar">
-    <h1 class="app-name">{{appName}}</h1>
-  </mat-toolbar>
-  <mat-drawer #drawer mode="side" opened style="background-color:#ecf0f1;">
-    <div *ngFor="let route of navMenu;">
-      <a (click)="emitPageRoute(route.routeTo)">{{route.name}}</a>  
-    </div>
-  </mat-drawer>
-  <app-mv-primary-button name="Toggle" (click)="drawer.toggle()"></app-mv-primary-button>
+<mat-toolbar class="col-md-12">
+  <span>{{appName}}</span>
+</mat-toolbar>
+<div class="col-md-3" style="height: 100%;background-color: brown;">
+  <div *ngFor="let nav of navMenu" style="padding:2rem;font:15px;font-weight:900" (click)="emitPageRoute(nav.routeTo)">
+    {{nav.name}}
+  </div>
 </div>
