@@ -1,9 +1,9 @@
 <div class="nav-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="nav-toolbar">
-    <button mat-icon-button (click)="emitPageRoute()"><mat-icon>menu</mat-icon></button>
+    <button mat-icon-button (click)="emitPageRoute();drawer.toggle()"><mat-icon>menu</mat-icon></button>
     <h1 class="app-name">{{appName}}</h1>
   </mat-toolbar>
 
-  <mat-drawer #drawer mode="side" opened>Drawer content</mat-drawer>
-  <app-mv-primary-button (click)="drawer.toggle()"></app-mv-primary-button>
+  <mat-drawer #drawer mode="side">Drawer content</mat-drawer>
+  <app-mv-primary-button name="Toggle" (click)="drawer.toggle()"></app-mv-primary-button>
 </div>
