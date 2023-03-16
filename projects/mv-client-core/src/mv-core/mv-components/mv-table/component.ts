@@ -1,4 +1,4 @@
-import { Component, Input,ViewChild} from '@angular/core';
+import { Component, EventEmitter, Input,Output,ViewChild} from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource, MatTable, MatTableModule } from '@angular/material/table';
 import { Vo } from '../../mv-form-core/types';
@@ -13,6 +13,7 @@ import { FormData } from '../../mv-form-core/formData';
 
 export class MvTableComponent {
 	@Input() tableGridData:TableMetaData | undefined;
+	@Output() viewAction = new EventEmitter<string>();
 	@ViewChild(MatTable,{static:true}) table: MatTable<any> | undefined;
 	@ViewChild(MatSort, {static: true}) sort: MatSort | undefined;
 	
@@ -60,9 +61,6 @@ export class MvTableComponent {
 		})
 		return tableData
 	}
-	applyFilter(filterValue: string) {
-		this.dataSource.filter = filterValue.trim().toLowerCase();
-	  }
 }
 
 export interface TableMetaData{

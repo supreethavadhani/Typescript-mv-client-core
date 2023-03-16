@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, Input} from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, Output} from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 
 
@@ -10,7 +10,8 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 export class MvSideNavComponent {
 	@Input() navMenu?: [];
-	@Input() appName: string = "MetadevApp";
+	@Input() appName: string = "Metadev App";
+  @Output() emitRoute: EventEmitter<string> = new EventEmitter();
 
 mobileQuery: MediaQueryList;
 
@@ -21,7 +22,7 @@ mobileQuery: MediaQueryList;
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);  
-	this.navMenu = [ ] 
+	  this.navMenu = [ ] 
   }
 
   ngOnDestroy(): void {
@@ -29,8 +30,6 @@ mobileQuery: MediaQueryList;
   }
 
   emitPageRoute(routeTo:string) {
-	// hello
-	console.log(routeTo)
+    this.emitRoute.next(routeTo);
   }
-
 }

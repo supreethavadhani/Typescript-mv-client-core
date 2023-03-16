@@ -1,8 +1,4 @@
 <div class="table-container" id="tableContainer">
-  <mat-form-field appearance="none" style="width: 80%;">
-    <input style="width:100%; font-family: Roboto-Light;font-size: 0.8333vw;"
-      placeholder="Search for values in the table" (keyup)="applyFilter($event.target.value)" />
-  </mat-form-field>
   <table mat-table [dataSource]="dataSource" matSort>
     <ng-container *ngFor="let i of tableData.metaData.column_names; let index=index" matColumnDef="{{i}}">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>
