@@ -8,7 +8,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 })
 
 export class MvSideNavComponent {
-	@Input() navMenu?: NavMenuItem[];
+	@Input() navMenu?: [];
 	@Input() appName: string = "MetadevApp";
 
 mobileQuery: MediaQueryList;
@@ -20,10 +20,7 @@ mobileQuery: MediaQueryList;
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);  
-	this.navMenu = [ {
-		"name":"no items in menu",
-		"routeTo": ""
-	} ,] 
+	this.navMenu = [ ] 
   }
 
   ngOnDestroy(): void {
