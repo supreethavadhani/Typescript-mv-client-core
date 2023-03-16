@@ -25,6 +25,7 @@ import { MvPrimaryButtonComponent } from './mv-primary-button/component';
 import { MvTableComponent } from './mv-table/component';
 import { MvSecondaryButtonComponent } from './mv-secondary-button/component';
 import { MvSideNavComponent } from './mv-sidenav/component';
+import { MvToolbarComponent } from './mv-toolbar/component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { MvSideNavComponent } from './mv-sidenav/component';
     MvSecondaryButtonComponent,
     MvTableComponent,
     MvSideNavComponent,
+    MvToolbarComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +57,8 @@ import { MvSideNavComponent } from './mv-sidenav/component';
     MvPrimaryButtonComponent,
     MvTableComponent,
     MvSecondaryButtonComponent,
-    MvSideNavComponent
+    MvSideNavComponent,
+    MvToolbarComponent
   ]
 })
 export class MVComponentsModule {}

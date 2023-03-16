@@ -23,3 +23,4 @@ export * from './mv-core/mv-components/mv-secondary-button/component';
 export * from './mv-core/mv-components/mv-table/component';
 export * from './mv-core/mv-form-core/formService';
 export * from './mv-core/mv-components/mv-sidenav/component';
+export * from './mv-core/mv-components/mv-toolbar/component';

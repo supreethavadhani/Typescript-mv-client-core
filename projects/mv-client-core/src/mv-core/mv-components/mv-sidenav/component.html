@@ -1,8 +1,5 @@
-<mat-toolbar class="col-md-12">
-  <span>{{appName}}</span>
-</mat-toolbar>
-<div class="col-md-3" style="height: 100%;background-color: brown;">
-  <div *ngFor="let nav of navMenu" style="padding:2rem;font:15px;font-weight:900" (click)="emitPageRoute(nav.routeTo)">
+<div class="col-md-3" style="height: 100vh;background-color: #34495e;">
+  <div *ngFor="let nav of navMenu" style="padding:0.5rem;font:15px;font-weight:900;color: whitesmoke;" (click)="emitPageRoute(nav.routeTo)">
     {{nav.name}}
   </div>
 </div>
