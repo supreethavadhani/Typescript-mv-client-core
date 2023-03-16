@@ -4,5 +4,6 @@
     <h1 class="app-name">{{appName}}</h1>
   </mat-toolbar>
 
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+  <mat-drawer #drawer mode="side" opened>Drawer content</mat-drawer>
+  <app-mv-primary-button (click)="drawer.toggle()"></app-mv-primary-button>
 </div>
