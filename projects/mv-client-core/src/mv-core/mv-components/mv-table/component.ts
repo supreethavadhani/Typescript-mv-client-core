@@ -60,10 +60,9 @@ export class MvTableComponent {
 		})
 		return tableData
 	}
-	applyFilter(event: Event) {
-		const filterValue = (event.target as HTMLInputElement).value;
+	applyFilter(filterValue: string) {
 		this.dataSource.filter = filterValue.trim().toLowerCase();
-	}
+	  }
 }
 
 export interface TableMetaData{
