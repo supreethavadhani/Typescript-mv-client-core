@@ -1,10 +1,11 @@
 <div class="nav-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="nav-toolbar">
-    <button mat-icon-button (click)="emitPageRoute();drawer.toggle()"><mat-icon>menu</mat-icon></button>
     <h1 class="app-name">{{appName}}</h1>
   </mat-toolbar>
-  <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer mode="side" opened>rjenrjkeg</mat-drawer>
-  </mat-drawer-container>
+  <mat-drawer #drawer mode="side" opened style="background-color:#ecf0f1;">
+    <div *ngFor="let route of navMenu;">
+      <a (click)="emitPageRoute(route.routeTo)">{{route.name}}</a>  
+    </div>
+  </mat-drawer>
   <app-mv-primary-button name="Toggle" (click)="drawer.toggle()"></app-mv-primary-button>
 </div>

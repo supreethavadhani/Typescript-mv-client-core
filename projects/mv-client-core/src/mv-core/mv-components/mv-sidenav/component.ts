@@ -30,9 +30,9 @@ mobileQuery: MediaQueryList;
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
-  emitPageRoute() {
+  emitPageRoute(routeTo:string) {
 	// hello
-	console.log(this.navMenu)
+	console.log(routeTo)
   }
 
 }
