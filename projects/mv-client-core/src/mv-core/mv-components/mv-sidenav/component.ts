@@ -5,6 +5,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 @Component({
 	selector: 'app-mv-sidenav',
 	templateUrl: './component.html',
+	styleUrls:['./component.scss']
 })
 
 export class MvSideNavComponent {
@@ -32,9 +33,4 @@ mobileQuery: MediaQueryList;
 	console.log(routeTo)
   }
 
-}
-
-interface NavMenuItem {
-	name:string,
-	routeTo: string
 }

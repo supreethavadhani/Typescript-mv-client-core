@@ -1,7 +1,12 @@
-<div style="height: 100vh;width:15rem;background-color: #34495e;">
-  <div style="cursor:pointer;padding:0.5rem;font:15px;font-weight:900;color: whitesmoke;">
+<div class = "nav-container">
+  <div class = "item-list">
+    <h3 style="margin:2rem">
+      <u> Menu</u>
+    </h3>
     <div *ngFor="let nav of navMenu" (click)="emitPageRoute(nav.routeTo)">
-      <span>{{nav.name}}</span>
+      <span style="font-size:1.2rem; color:white">{{nav.name.toUpperCase()}}</span>
+      <div class="white-line"></div>
+      <hr>
     </div>
   </div>
 </div>

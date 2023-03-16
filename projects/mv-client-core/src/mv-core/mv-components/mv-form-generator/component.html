@@ -1,7 +1,7 @@
-<mat-card class="col-md-12" style="margin: 0 auto;">
+<div class="col-md-12" style="margin: 0 auto;">
   <div *ngFor="let field of fields | keyvalue" [ngSwitch]="field.value.controlType">
     <app-mv-textbox class="col" *ngSwitchCase="'Input'" [field]="form[field.key]" [formData]="formData"></app-mv-textbox>
     <app-mv-textarea class="col" *ngSwitchCase="'Textarea'" [field]="form[field.key]" [formData]="formData"></app-mv-textarea>
     <app-mv-dropdown class="col" *ngSwitchCase="'Dropdown'" [field]="form[field.key]" [formData]="formData"></app-mv-dropdown>
   </div>
-</mat-card>
+</div>

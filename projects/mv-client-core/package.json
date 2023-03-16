@@ -1,6 +1,6 @@
 {
   "name": "mv-core",
-  "version": "0.0.78",
+  "version": "0.0.79",
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"
