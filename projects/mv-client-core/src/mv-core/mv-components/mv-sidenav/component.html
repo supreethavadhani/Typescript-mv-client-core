@@ -1,12 +1,12 @@
 <div class = "nav-container">
   <div class = "item-list">
     <h3 style="margin:2rem">
-      <u> Menu</u>
+       Menu
+       <div class="white-line"></div>
     </h3>
     <div *ngFor="let nav of navMenu" (click)="emitPageRoute(nav.routeTo)">
-      <span style="font-size:1.2rem; color:white">{{nav.name.toUpperCase()}}</span>
+      <div style="font-size:1rem; color:white;text-align: center;">{{nav.name.toUpperCase()}}</div>
       <div class="white-line"></div>
-      <hr>
     </div>
   </div>
 </div>
