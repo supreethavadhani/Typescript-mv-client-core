@@ -3,7 +3,7 @@
     <h3 style="margin:2rem;text-align: center;">
        MENU
     </h3>
-    <div *ngFor="let nav of navMenu" (click)="emitPageRoute(nav.routeTo)" style="cursor: pointer;">
+    <div *ngFor="let nav of navMenu" (click)="emitPageRoute(nav.routeTo)" style="cursor: pointer;padding: 2rem;">
       <div style="font-size:1rem; color:white;text-align: center;">{{nav.name.toUpperCase()}}</div>
       <div class="white-line"></div>
     </div>

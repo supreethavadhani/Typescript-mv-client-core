@@ -1,5 +1,5 @@
 .table-container {
-    height: auto;
+    max-height: 50vh;
     overflow: auto;
     padding-left:2rem;
     padding-right: 1rem;
@@ -17,8 +17,9 @@
     height: 3.125rem;
     font-family: Roboto-Medium !important;
     font-size:1.1vw;
-    color: black;
+    color: #004faa;
     border-bottom: none !important;
+  
   }
   td{
     height: 3.125rem;
