@@ -64,6 +64,7 @@ export class MvTableComponent {
 
 	fetchRowNumberEdit(rowData:any) {
 		this.rowNumber = this.tempDatasource.indexOf(rowData);
+		console.log(this.rowNumber)
 		this.editAction.next(this.rowNumber);
 	  }
 
