@@ -1,6 +1,9 @@
 <div class="table-container" id="tableContainer">
   <table mat-table [dataSource]="dataSource" matSort>
     <ng-container *ngFor="let i of tableData.metaData.column_names; let index=index" matColumnDef="{{i}}">
+      <th mat-header-cell *matHeaderCellDef >
+      </th>
+      <td style="padding-right: 14px;" mat-cell *matCellDef="let element;let rowData=$implicit;" class="edit" align="end" (click)="fetchRowNumberEdit(rowData)"><button style="outline: none;" mat-button>{{tableData.metaData.buttonName}}</button></td>
       <th mat-header-cell *matHeaderCellDef mat-sort-header>
         {{tableData.metaData.display_names[i]}}
       </th>

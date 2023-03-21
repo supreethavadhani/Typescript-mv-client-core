@@ -13,7 +13,7 @@ import { FormData } from '../../mv-form-core/formData';
 
 export class MvTableComponent {
 	@Input() tableGridData:TableMetaData | undefined;
-	@Output() viewAction = new EventEmitter<string>();
+	@Output() editAction = new EventEmitter<string>();
 	@ViewChild(MatTable,{static:true}) table: MatTable<any> | undefined;
 	@ViewChild(MatSort, {static: true}) sort: MatSort | undefined;
 	
@@ -37,9 +37,9 @@ export class MvTableComponent {
 
 		this.tempDatasource = this.tableGridData!.data;
 		this.tempDatasource = this.tableGridData!.data
+		this.tableData.metaData.column_names = this.tableData.metaData.column_names.concat(['edit']);
 		this.dataSource = new MatTableDataSource<any>(this.tableData.data);
 		this.dataSource.sort = this.sort;
-		console.log(this.tableGridData)
 		}
 
 	getColumnData(fd:FormData){
@@ -61,6 +61,12 @@ export class MvTableComponent {
 		})
 		return tableData
 	}
+
+	fetchRowNumberEdit(rowData:any) {
+		this.rowNumber = this.tempDatasource.indexOf(rowData);
+		this.editAction.next(this.rowNumber);
+	  }
+
 }
 
 export interface TableMetaData{
