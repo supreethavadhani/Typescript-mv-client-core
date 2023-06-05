@@ -1,17 +1,17 @@
 .nav-container {
-  height: 98vh;
+  height: 96vh;
   width: 20rem;
   background-color: #004faa;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   font-size: 1.5rem;
-  border-bottom: 1.5rem;
-  margin:0.5rem;
+  border-radius: 1.5rem;
+  margin:1rem;
 }
 
 .item-list {
   padding: 0.5rem;
-  font: 15px;
-  font-weight: 900;
+  font-size: 1.3rem;
+  font-weight: 200;
   color: whitesmoke;
 }
 
