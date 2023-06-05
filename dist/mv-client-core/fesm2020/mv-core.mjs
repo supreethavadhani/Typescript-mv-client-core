@@ -19,7 +19,6 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import * as i1$3 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import * as i2$1 from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card';
 import * as i1$2 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -35,7 +34,6 @@ import * as i2 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 import * as i4 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
-import * as i5$1 from '@angular/material/list';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import * as i1$1 from '@angular/material/core';
@@ -46,18 +44,17 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRadioModule } from '@angular/material/radio';
 import * as i4$1 from '@angular/material/select';
 import { MatSelectModule } from '@angular/material/select';
-import * as i6 from '@angular/material/sidenav';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import * as i1$6 from '@angular/material/snack-bar';
+import * as i1$7 from '@angular/material/snack-bar';
 import { MatSnackBarModule, MatSnackBarConfig } from '@angular/material/snack-bar';
-import * as i2$2 from '@angular/material/sort';
+import * as i3$2 from '@angular/material/sort';
 import { MatSortModule, MatSort } from '@angular/material/sort';
-import * as i3$2 from '@angular/material/table';
+import * as i4$2 from '@angular/material/table';
 import { MatTableModule, MatTableDataSource, MatTable } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
-import * as i7 from '@angular/material/toolbar';
+import * as i1$5 from '@angular/material/toolbar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
@@ -70,7 +67,7 @@ import * as i1$4 from '@angular/cdk/layout';
 import { __decorate } from 'tslib';
 import { throwError, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import * as i1$5 from '@angular/common/http';
+import * as i1$6 from '@angular/common/http';
 import { HttpParams } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
@@ -453,10 +450,10 @@ class MvFormGeneratorComponent {
     }
 }
 MvFormGeneratorComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvFormGeneratorComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvFormGeneratorComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvFormGeneratorComponent, selector: "app-mv-form-generator", inputs: { formData: "formData" }, ngImport: i0, template: "<mat-card class=\"col-md-12\" style=\"margin: 0 auto;\">\r\n  <div *ngFor=\"let field of fields | keyvalue\" [ngSwitch]=\"field.value.controlType\">\r\n    <app-mv-textbox class=\"col\" *ngSwitchCase=\"'Input'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textbox>\r\n    <app-mv-textarea class=\"col\" *ngSwitchCase=\"'Textarea'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textarea>\r\n    <app-mv-dropdown class=\"col\" *ngSwitchCase=\"'Dropdown'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-dropdown>\r\n  </div>\r\n</mat-card>\r\n", dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgSwitch, selector: "[ngSwitch]", inputs: ["ngSwitch"] }, { kind: "directive", type: i1.NgSwitchCase, selector: "[ngSwitchCase]", inputs: ["ngSwitchCase"] }, { kind: "component", type: i2$1.MatCard, selector: "mat-card", exportAs: ["matCard"] }, { kind: "component", type: MvTextboxComponent, selector: "app-mv-textbox", inputs: ["field", "formData", "type"], outputs: ["valueChange"] }, { kind: "component", type: MvDropDownComponent, selector: "app-mv-dropdown", inputs: ["field", "formData", "type"], outputs: ["valueChange", "changeListener"] }, { kind: "component", type: MvTextareaComponent, selector: "app-mv-textarea", inputs: ["field", "formData", "type"], outputs: ["valueChange"] }, { kind: "pipe", type: i1.KeyValuePipe, name: "keyvalue" }] });
+MvFormGeneratorComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvFormGeneratorComponent, selector: "app-mv-form-generator", inputs: { formData: "formData" }, ngImport: i0, template: "<div class=\"col-md-12\" style=\"margin: 0 auto;\">\r\n  <div *ngFor=\"let field of fields | keyvalue\" [ngSwitch]=\"field.value.controlType\">\r\n    <app-mv-textbox class=\"col\" *ngSwitchCase=\"'Input'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textbox>\r\n    <app-mv-textarea class=\"col\" *ngSwitchCase=\"'Textarea'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textarea>\r\n    <app-mv-dropdown class=\"col\" *ngSwitchCase=\"'Dropdown'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-dropdown>\r\n  </div>\r\n</div>\r\n", dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgSwitch, selector: "[ngSwitch]", inputs: ["ngSwitch"] }, { kind: "directive", type: i1.NgSwitchCase, selector: "[ngSwitchCase]", inputs: ["ngSwitchCase"] }, { kind: "component", type: MvTextboxComponent, selector: "app-mv-textbox", inputs: ["field", "formData", "type"], outputs: ["valueChange"] }, { kind: "component", type: MvDropDownComponent, selector: "app-mv-dropdown", inputs: ["field", "formData", "type"], outputs: ["valueChange", "changeListener"] }, { kind: "component", type: MvTextareaComponent, selector: "app-mv-textarea", inputs: ["field", "formData", "type"], outputs: ["valueChange"] }, { kind: "pipe", type: i1.KeyValuePipe, name: "keyvalue" }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvFormGeneratorComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'app-mv-form-generator', template: "<mat-card class=\"col-md-12\" style=\"margin: 0 auto;\">\r\n  <div *ngFor=\"let field of fields | keyvalue\" [ngSwitch]=\"field.value.controlType\">\r\n    <app-mv-textbox class=\"col\" *ngSwitchCase=\"'Input'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textbox>\r\n    <app-mv-textarea class=\"col\" *ngSwitchCase=\"'Textarea'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textarea>\r\n    <app-mv-dropdown class=\"col\" *ngSwitchCase=\"'Dropdown'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-dropdown>\r\n  </div>\r\n</mat-card>\r\n" }]
+            args: [{ selector: 'app-mv-form-generator', template: "<div class=\"col-md-12\" style=\"margin: 0 auto;\">\r\n  <div *ngFor=\"let field of fields | keyvalue\" [ngSwitch]=\"field.value.controlType\">\r\n    <app-mv-textbox class=\"col\" *ngSwitchCase=\"'Input'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textbox>\r\n    <app-mv-textarea class=\"col\" *ngSwitchCase=\"'Textarea'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-textarea>\r\n    <app-mv-dropdown class=\"col\" *ngSwitchCase=\"'Dropdown'\" [field]=\"form[field.key]\" [formData]=\"formData\"></app-mv-dropdown>\r\n  </div>\r\n</div>\r\n" }]
         }], propDecorators: { formData: [{
                 type: Input
             }] } });
@@ -562,6 +559,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
 
 class MvTableComponent {
     constructor() {
+        this.editAction = new EventEmitter();
         this.tableData = { data: [], metaData: {} };
         this.values = [];
         this.colored = [];
@@ -576,9 +574,9 @@ class MvTableComponent {
         this.columns = this.tableData.metaData.column_names;
         this.tempDatasource = this.tableGridData.data;
         this.tempDatasource = this.tableGridData.data;
+        this.tableData.metaData.column_names = this.tableData.metaData.column_names.concat(['edit']);
         this.dataSource = new MatTableDataSource(this.tableData.data);
         this.dataSource.sort = this.sort;
-        console.log(this.tableGridData);
     }
     getColumnData(fd) {
         let tableData = {
@@ -596,14 +594,21 @@ class MvTableComponent {
         });
         return tableData;
     }
+    fetchRowNumberEdit(rowData) {
+        this.rowNumber = this.tempDatasource.indexOf(rowData);
+        console.log(this.rowNumber);
+        this.editAction.next(this.rowNumber);
+    }
 }
 MvTableComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTableComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MvTableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTableComponent, selector: "app-mv-table", inputs: { tableGridData: "tableGridData" }, viewQueries: [{ propertyName: "table", first: true, predicate: MatTable, descendants: true, static: true }, { propertyName: "sort", first: true, predicate: MatSort, descendants: true, static: true }], ngImport: i0, template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        {{tableData.metaData.display_names[i]}}\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", styles: [".table-container{height:auto;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Roboto-Medium!important;font-size:1.1vw;color:#000;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i2$2.MatSort, selector: "[matSort]", inputs: ["matSortDisabled", "matSortActive", "matSortStart", "matSortDirection", "matSortDisableClear"], outputs: ["matSortChange"], exportAs: ["matSort"] }, { kind: "component", type: i2$2.MatSortHeader, selector: "[mat-sort-header]", inputs: ["disabled", "mat-sort-header", "arrowPosition", "start", "sortActionDescription", "disableClear"], exportAs: ["matSortHeader"] }, { kind: "component", type: i3$2.MatTable, selector: "mat-table, table[mat-table]", exportAs: ["matTable"] }, { kind: "directive", type: i3$2.MatHeaderCellDef, selector: "[matHeaderCellDef]" }, { kind: "directive", type: i3$2.MatHeaderRowDef, selector: "[matHeaderRowDef]", inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"] }, { kind: "directive", type: i3$2.MatColumnDef, selector: "[matColumnDef]", inputs: ["sticky", "matColumnDef"] }, { kind: "directive", type: i3$2.MatCellDef, selector: "[matCellDef]" }, { kind: "directive", type: i3$2.MatRowDef, selector: "[matRowDef]", inputs: ["matRowDefColumns", "matRowDefWhen"] }, { kind: "directive", type: i3$2.MatHeaderCell, selector: "mat-header-cell, th[mat-header-cell]" }, { kind: "directive", type: i3$2.MatCell, selector: "mat-cell, td[mat-cell]" }, { kind: "component", type: i3$2.MatHeaderRow, selector: "mat-header-row, tr[mat-header-row]", exportAs: ["matHeaderRow"] }, { kind: "component", type: i3$2.MatRow, selector: "mat-row, tr[mat-row]", exportAs: ["matRow"] }] });
+MvTableComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvTableComponent, selector: "app-mv-table", inputs: { tableGridData: "tableGridData" }, outputs: { editAction: "editAction" }, viewQueries: [{ propertyName: "table", first: true, predicate: MatTable, descendants: true, static: true }, { propertyName: "sort", first: true, predicate: MatSort, descendants: true, static: true }], ngImport: i0, template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <ng-container *ngIf=\"i=='edit'; else dataPart\">\r\n        <th mat-header-cell *matHeaderCellDef>\r\n        </th>\r\n        <td style=\"padding-right: 14px;\" mat-cell *matCellDef=\"let element;let rowData=$implicit;\" class=\"edit\"\r\n          (click)=\"fetchRowNumberEdit(rowData)\"><button style=\"outline: none;\" mat-button>EDIT</button></td>\r\n      </ng-container>\r\n      <ng-template #dataPart>\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n          {{tableData.metaData.display_names[i]}}\r\n        </th>\r\n        <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n      </ng-template>\r\n    </ng-container>\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", styles: [".table-container{max-height:50vh;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Lato!important;font-size:1.1vw;color:#004faa;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i1$3.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "directive", type: i3$2.MatSort, selector: "[matSort]", inputs: ["matSortDisabled", "matSortActive", "matSortStart", "matSortDirection", "matSortDisableClear"], outputs: ["matSortChange"], exportAs: ["matSort"] }, { kind: "component", type: i3$2.MatSortHeader, selector: "[mat-sort-header]", inputs: ["disabled", "mat-sort-header", "arrowPosition", "start", "sortActionDescription", "disableClear"], exportAs: ["matSortHeader"] }, { kind: "component", type: i4$2.MatTable, selector: "mat-table, table[mat-table]", exportAs: ["matTable"] }, { kind: "directive", type: i4$2.MatHeaderCellDef, selector: "[matHeaderCellDef]" }, { kind: "directive", type: i4$2.MatHeaderRowDef, selector: "[matHeaderRowDef]", inputs: ["matHeaderRowDef", "matHeaderRowDefSticky"] }, { kind: "directive", type: i4$2.MatColumnDef, selector: "[matColumnDef]", inputs: ["sticky", "matColumnDef"] }, { kind: "directive", type: i4$2.MatCellDef, selector: "[matCellDef]" }, { kind: "directive", type: i4$2.MatRowDef, selector: "[matRowDef]", inputs: ["matRowDefColumns", "matRowDefWhen"] }, { kind: "directive", type: i4$2.MatHeaderCell, selector: "mat-header-cell, th[mat-header-cell]" }, { kind: "directive", type: i4$2.MatCell, selector: "mat-cell, td[mat-cell]" }, { kind: "component", type: i4$2.MatHeaderRow, selector: "mat-header-row, tr[mat-header-row]", exportAs: ["matHeaderRow"] }, { kind: "component", type: i4$2.MatRow, selector: "mat-row, tr[mat-row]", exportAs: ["matRow"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvTableComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'app-mv-table', template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n        {{tableData.metaData.display_names[i]}}\r\n      </th>\r\n      <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", styles: [".table-container{height:auto;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Roboto-Medium!important;font-size:1.1vw;color:#000;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"] }]
+            args: [{ selector: 'app-mv-table', template: "<div class=\"table-container\" id=\"tableContainer\">\r\n  <table mat-table [dataSource]=\"dataSource\" matSort>\r\n    <ng-container *ngFor=\"let i of tableData.metaData.column_names; let index=index\" matColumnDef=\"{{i}}\">\r\n      <ng-container *ngIf=\"i=='edit'; else dataPart\">\r\n        <th mat-header-cell *matHeaderCellDef>\r\n        </th>\r\n        <td style=\"padding-right: 14px;\" mat-cell *matCellDef=\"let element;let rowData=$implicit;\" class=\"edit\"\r\n          (click)=\"fetchRowNumberEdit(rowData)\"><button style=\"outline: none;\" mat-button>EDIT</button></td>\r\n      </ng-container>\r\n      <ng-template #dataPart>\r\n        <th mat-header-cell *matHeaderCellDef mat-sort-header>\r\n          {{tableData.metaData.display_names[i]}}\r\n        </th>\r\n        <td mat-cell *matCellDef=\"let element;\">{{element[i]}}</td>\r\n      </ng-template>\r\n    </ng-container>\r\n    <tr mat-header-row *matHeaderRowDef=\" tableData.metaData.column_names;sticky: true\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: tableData.metaData.column_names;\"></tr>\r\n  </table>\r\n</div>\r\n", styles: [".table-container{max-height:50vh;overflow:auto;padding-left:2rem;padding-right:1rem;margin-right:1.875rem;margin:2rem}table{width:100%}tr.mat-header-row{height:3.125rem;font-weight:700}th{height:3.125rem;font-family:Lato!important;font-size:1.1vw;color:#004faa;border-bottom:none!important}td{height:3.125rem;cursor:pointer;border-bottom:1px dashed #e0e0e0!important;font-size:.937vw;color:#0009}:host ::ng-deep .mat-form-field-wrapper{padding-bottom:0!important}:host ::ng-deep .mat-form-field-infix{width:auto}\n"] }]
         }], propDecorators: { tableGridData: [{
                 type: Input
+            }], editAction: [{
+                type: Output
             }], table: [{
                 type: ViewChild,
                 args: [MatTable, { static: true }]
@@ -632,31 +637,44 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
 
 class MvSideNavComponent {
     constructor(changeDetectorRef, media) {
-        this.appName = "MetadevApp";
+        this.appName = "Metadev App";
+        this.emitRoute = new EventEmitter();
         this.mobileQuery = media.matchMedia('(max-width: 600px)');
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.mobileQuery.addListener(this._mobileQueryListener);
-        this.navMenu = [{
-                "name": "no items in menu",
-                "routeTo": ""
-            },];
+        this.navMenu = [];
     }
     ngOnDestroy() {
         this.mobileQuery.removeListener(this._mobileQueryListener);
     }
-    emitPageRoute(selectedPage) {
-        // hello
-        console.log(this.navMenu);
+    emitPageRoute(routeTo) {
+        this.emitRoute.next(routeTo);
     }
 }
 MvSideNavComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSideNavComponent, deps: [{ token: i0.ChangeDetectorRef }, { token: i1$4.MediaMatcher }], target: i0.ɵɵFactoryTarget.Component });
-MvSideNavComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvSideNavComponent, selector: "app-mv-sidenav", inputs: { navMenu: "navMenu", appName: "appName" }, ngImport: i0, template: "<div class=\"nav-container\" [class.example-is-mobile]=\"mobileQuery.matches\">\r\n  <mat-toolbar color=\"primary\" class=\"nav-toolbar\">\r\n    <button mat-icon-button (click)=\"snav.toggle()\"><mat-icon>menu</mat-icon></button>\r\n    <h1 class=\"app-name\">{{appName}}</h1>\r\n  </mat-toolbar>\r\n\r\n  <mat-sidenav-container class=\"nav-sidenav-container\"\r\n                         [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n    <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                 [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\">\r\n      <mat-nav-list>\r\n        <a mat-list-item *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\">{{nav.name}} </a>\r\n      </mat-nav-list>\r\n    </mat-sidenav>\r\n  </mat-sidenav-container>\r\n</div>", dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { kind: "component", type: i1$3.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i2.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "component", type: i5$1.MatNavList, selector: "mat-nav-list", inputs: ["disableRipple", "disabled"], exportAs: ["matNavList"] }, { kind: "component", type: i5$1.MatListItem, selector: "mat-list-item, a[mat-list-item], button[mat-list-item]", inputs: ["disableRipple", "disabled"], exportAs: ["matListItem"] }, { kind: "component", type: i6.MatSidenav, selector: "mat-sidenav", inputs: ["fixedInViewport", "fixedTopGap", "fixedBottomGap"], exportAs: ["matSidenav"] }, { kind: "component", type: i6.MatSidenavContainer, selector: "mat-sidenav-container", exportAs: ["matSidenavContainer"] }, { kind: "component", type: i7.MatToolbar, selector: "mat-toolbar", inputs: ["color"], exportAs: ["matToolbar"] }] });
+MvSideNavComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvSideNavComponent, selector: "app-mv-sidenav", inputs: { navMenu: "navMenu", appName: "appName" }, outputs: { emitRoute: "emitRoute" }, ngImport: i0, template: "<div class = \"nav-container\">\r\n  <div class = \"item-list\">\r\n    <h3 style=\"margin:2rem;text-align: center;\">\r\n       Metadev\r\n    </h3>\r\n    <div *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\" style=\"cursor: pointer;padding: 2rem;\">\r\n      <div style=\"font-size:1rem; color:white;\">{{nav.name}}</div>\r\n    </div>\r\n  </div>\r\n</div>", styles: [".nav-container{height:98vh;width:20rem;background-color:#004faa;box-shadow:#00000040 0 14px 28px,#00000038 0 10px 10px;font-size:1.5rem;border-bottom:1.5rem;margin:.5rem}.item-list{padding:.5rem;font:15px;font-weight:900;color:#f5f5f5}.white-line{margin:0 2rem;border-top:1px solid rgba(254,254,254,.63)}\n"], dependencies: [{ kind: "directive", type: i1.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvSideNavComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'app-mv-sidenav', template: "<div class=\"nav-container\" [class.example-is-mobile]=\"mobileQuery.matches\">\r\n  <mat-toolbar color=\"primary\" class=\"nav-toolbar\">\r\n    <button mat-icon-button (click)=\"snav.toggle()\"><mat-icon>menu</mat-icon></button>\r\n    <h1 class=\"app-name\">{{appName}}</h1>\r\n  </mat-toolbar>\r\n\r\n  <mat-sidenav-container class=\"nav-sidenav-container\"\r\n                         [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n    <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                 [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\">\r\n      <mat-nav-list>\r\n        <a mat-list-item *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\">{{nav.name}} </a>\r\n      </mat-nav-list>\r\n    </mat-sidenav>\r\n  </mat-sidenav-container>\r\n</div>" }]
+            args: [{ selector: 'app-mv-sidenav', template: "<div class = \"nav-container\">\r\n  <div class = \"item-list\">\r\n    <h3 style=\"margin:2rem;text-align: center;\">\r\n       Metadev\r\n    </h3>\r\n    <div *ngFor=\"let nav of navMenu\" (click)=\"emitPageRoute(nav.routeTo)\" style=\"cursor: pointer;padding: 2rem;\">\r\n      <div style=\"font-size:1rem; color:white;\">{{nav.name}}</div>\r\n    </div>\r\n  </div>\r\n</div>", styles: [".nav-container{height:98vh;width:20rem;background-color:#004faa;box-shadow:#00000040 0 14px 28px,#00000038 0 10px 10px;font-size:1.5rem;border-bottom:1.5rem;margin:.5rem}.item-list{padding:.5rem;font:15px;font-weight:900;color:#f5f5f5}.white-line{margin:0 2rem;border-top:1px solid rgba(254,254,254,.63)}\n"] }]
         }], ctorParameters: function () { return [{ type: i0.ChangeDetectorRef }, { type: i1$4.MediaMatcher }]; }, propDecorators: { navMenu: [{
                 type: Input
             }], appName: [{
+                type: Input
+            }], emitRoute: [{
+                type: Output
+            }] } });
+
+class MvToolbarComponent {
+    constructor() {
+        this.appName = "MetadevApp";
+    }
+}
+MvToolbarComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvToolbarComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
+MvToolbarComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.3", type: MvToolbarComponent, selector: "app-mv-toolbar", inputs: { appName: "appName" }, ngImport: i0, template: "<mat-toolbar class=\"col-md-12\">\r\n  <span>{{appName}}</span>\r\n</mat-toolbar>\r\n", styles: ["mat-toolbar{box-shadow:#00000030 0 10px 20px,#0000003b 0 6px 6px;font-size:2rem;background-color:#fff;color:#004faa}\n"], dependencies: [{ kind: "component", type: i1$5.MatToolbar, selector: "mat-toolbar", inputs: ["color"], exportAs: ["matToolbar"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MvToolbarComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'app-mv-toolbar', template: "<mat-toolbar class=\"col-md-12\">\r\n  <span>{{appName}}</span>\r\n</mat-toolbar>\r\n", styles: ["mat-toolbar{box-shadow:#00000030 0 10px 20px,#0000003b 0 6px 6px;font-size:2rem;background-color:#fff;color:#004faa}\n"] }]
+        }], propDecorators: { appName: [{
                 type: Input
             }] } });
 
@@ -672,7 +690,8 @@ MVComponentsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", vers
         MvPrimaryButtonComponent,
         MvSecondaryButtonComponent,
         MvTableComponent,
-        MvSideNavComponent], imports: [CommonModule,
+        MvSideNavComponent,
+        MvToolbarComponent], imports: [CommonModule,
         MaterialModule,
         ReactiveFormsModule], exports: [MvTextboxComponent,
         MvDropDownComponent,
@@ -683,7 +702,8 @@ MVComponentsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", vers
         MvPrimaryButtonComponent,
         MvTableComponent,
         MvSecondaryButtonComponent,
-        MvSideNavComponent] });
+        MvSideNavComponent,
+        MvToolbarComponent] });
 MVComponentsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MVComponentsModule, imports: [CommonModule,
         MaterialModule,
         ReactiveFormsModule] });
@@ -701,6 +721,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                         MvSecondaryButtonComponent,
                         MvTableComponent,
                         MvSideNavComponent,
+                        MvToolbarComponent
                     ],
                     imports: [
                         CommonModule,
@@ -717,7 +738,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
                         MvPrimaryButtonComponent,
                         MvTableComponent,
                         MvSecondaryButtonComponent,
-                        MvSideNavComponent
+                        MvSideNavComponent,
+                        MvToolbarComponent
                     ]
                 }]
         }] });
@@ -1941,14 +1963,14 @@ class ServiceAgent {
         document.body.removeChild(a);
     }
 }
-ServiceAgent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, deps: [{ token: i1$5.HttpClient }, { token: ClientConfig }, { token: ClientContext }], target: i0.ɵɵFactoryTarget.Injectable });
+ServiceAgent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, deps: [{ token: i1$6.HttpClient }, { token: ClientConfig }, { token: ClientContext }], target: i0.ɵɵFactoryTarget.Injectable });
 ServiceAgent.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: ServiceAgent, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], ctorParameters: function () { return [{ type: i1$5.HttpClient }, { type: ClientConfig }, { type: ClientContext }]; } });
+        }], ctorParameters: function () { return [{ type: i1$6.HttpClient }, { type: ClientConfig }, { type: ClientContext }]; } });
 
 /**
  * transposed column name is PRE + key to ensure that it does not clash with any existing attribute
@@ -2136,11 +2158,11 @@ class MessageService {
         this.snackBar.dismiss();
     }
 }
-MessageService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, deps: [{ token: i1$6.MatSnackBar }], target: i0.ɵɵFactoryTarget.Injectable });
+MessageService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, deps: [{ token: i1$7.MatSnackBar }], target: i0.ɵɵFactoryTarget.Injectable });
 MessageService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImport: i0, type: MessageService, decorators: [{
             type: Injectable
-        }], ctorParameters: function () { return [{ type: i1$6.MatSnackBar }]; } });
+        }], ctorParameters: function () { return [{ type: i1$7.MatSnackBar }]; } });
 
 class FormService {
     static getFormFd(formName, sa, allServices) {
@@ -2163,5 +2185,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { Form, FormData$1 as FormData, FormModule, FormService, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MessageService, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvSecondaryButtonComponent, MvSideNavComponent, MvTableComponent, MvTextareaComponent, MvTextboxComponent, PanelData, ServiceAgent, TabularData, Transposer };
+export { Form, FormData$1 as FormData, FormModule, FormService, MVClientCoreAppModule, MVComponentsModule, MaterialModule, MessageService, MvCheckboxComponent, MvClientCoreService, MvDatePickerComponent, MvDropDownComponent, MvFormGeneratorComponent, MvPrimaryButtonComponent, MvSecondaryButtonComponent, MvSideNavComponent, MvTableComponent, MvTextareaComponent, MvTextboxComponent, MvToolbarComponent, PanelData, ServiceAgent, TabularData, Transposer };
 //# sourceMappingURL=mv-core.mjs.map

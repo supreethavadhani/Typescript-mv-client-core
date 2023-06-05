@@ -1,11 +1,10 @@
 <div class = "nav-container">
   <div class = "item-list">
     <h3 style="margin:2rem;text-align: center;">
-       MENU
+       Metadev
     </h3>
     <div *ngFor="let nav of navMenu" (click)="emitPageRoute(nav.routeTo)" style="cursor: pointer;padding: 2rem;">
-      <div style="font-size:1rem; color:white;text-align: center;">{{nav.name.toUpperCase()}}</div>
-      <div class="white-line"></div>
+      <div style="font-size:1rem; color:white;">{{nav.name}}</div>
     </div>
   </div>
 </div>

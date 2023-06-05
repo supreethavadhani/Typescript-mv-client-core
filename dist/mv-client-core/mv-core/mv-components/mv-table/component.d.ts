@@ -1,3 +1,4 @@
+import { EventEmitter } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { Vo } from '../../mv-form-core/types';
@@ -5,6 +6,7 @@ import { FormData } from '../../mv-form-core/formData';
 import * as i0 from "@angular/core";
 export declare class MvTableComponent {
     tableGridData: TableMetaData | undefined;
+    editAction: EventEmitter<string>;
     table: MatTable<any> | undefined;
     sort: MatSort | undefined;
     tableData: any;
@@ -20,8 +22,9 @@ export declare class MvTableComponent {
     columns: any;
     update(): void;
     getColumnData(fd: FormData): TableMetaData;
+    fetchRowNumberEdit(rowData: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MvTableComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MvTableComponent, "app-mv-table", never, { "tableGridData": "tableGridData"; }, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MvTableComponent, "app-mv-table", never, { "tableGridData": "tableGridData"; }, { "editAction": "editAction"; }, never, never, false>;
 }
 export interface TableMetaData {
     data: Vo[];
