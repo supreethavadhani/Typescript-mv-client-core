@@ -3,8 +3,8 @@
     <h3 style="margin:2rem;">
        Metadev UI
     </h3>
-    <div *ngFor="let nav of navMenu" (click)="emitPageRoute(nav.routeTo)" style="cursor: pointer;padding: 2rem;">
-      <div style="font-size:1rem; color:white;">{{nav.name}}</div>
+    <div *ngFor="let nav of navMenu" (click)="emitPageRoute(nav.routeTo)" style="cursor: pointer;padding: 1rem;">
+      <div class="list-item" style="font-size:1.35rem; color:white;">{{nav.name}}</div>
     </div>
   </div>
 </div>
