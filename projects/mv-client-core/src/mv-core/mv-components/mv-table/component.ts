@@ -69,6 +69,7 @@ export class MvTableComponent {
 	  }
 
 	  applyFilter(filterValue: string) {
+		if(this.dataSource)
 		this.dataSource.filter = filterValue.trim().toLowerCase();
 	  }
 
