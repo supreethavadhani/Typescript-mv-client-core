@@ -1,5 +1,5 @@
 .table-container {
-    max-height: 50vh;
+    max-height: 85vh;
     overflow: auto;
   }
   table {
@@ -12,7 +12,7 @@
   th{
     height: 3.125rem;
     font-family:Lato !important;
-    font-size:1.1vw;
+    font-size:1.3rem;
     color: #004faa;
     border-bottom: none !important;
   
@@ -32,3 +32,7 @@
   :host ::ng-deep .mat-form-field-infix {
     width:auto;
   }
+
+  tr.mat-row, tr.mat-footer-row {
+    height: 5rem;
+}

@@ -68,6 +68,11 @@ export class MvTableComponent {
 		this.editAction.next(this.rowNumber);
 	  }
 
+	  applyFilter(filterValue: string) {
+		this.dataSource.filter = filterValue.trim().toLowerCase();
+	  }
+
+
 }
 
 export interface TableMetaData{

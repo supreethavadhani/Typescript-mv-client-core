@@ -23,6 +23,7 @@ export declare class MvTableComponent {
     update(): void;
     getColumnData(fd: FormData): TableMetaData;
     fetchRowNumberEdit(rowData: any): void;
+    applyFilter(filterValue: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MvTableComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MvTableComponent, "app-mv-table", never, { "tableGridData": "tableGridData"; }, { "editAction": "editAction"; }, never, never, false>;
 }
