@@ -5,7 +5,7 @@
       (keyup)="applyFilter($event.target.value)" />
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
-	<span style="font-family:'Roboto-Light'; font-size: 0.8rem;color: rgba(0,0,0,0.6);">Total Items: {{dataSource.filteredData.length}}</span>
+	<span *ngIf= "dataSource.filteredData" style="font-family:'Roboto-Light'; font-size: 0.8rem;color: rgba(0,0,0,0.6);">Total Items: {{dataSource.filteredData.length}}</span>
   <table mat-table [dataSource]="dataSource" matSort>
     <ng-container *ngFor="let i of tableData.metaData.column_names; let index=index" matColumnDef="{{i}}">
       <ng-container *ngIf="i=='edit'; else dataPart">
