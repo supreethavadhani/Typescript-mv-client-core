@@ -1,10 +1,11 @@
 <div class="table-container" id="tableContainer">
-  <mat-form-field appearance="none" style="width: 80%;">
-    <mat-label>Outline form field</mat-label>
+  <mat-form-field appearance="fill" style="margin:1.2rem">
+    <mat-label>Search for Records</mat-label>
     <input matInput style="width:100%; font-family: Roboto-Light;font-size: 0.8333vw;" placeholder="Search Records"
       (keyup)="applyFilter($event.target.value)" />
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
+	<span style="font-family:'Roboto-Light'; font-size: 0.8rem;color: rgba(0,0,0,0.6);">Total Items: {{dataSource.filteredData.length}}</span>
   <table mat-table [dataSource]="dataSource" matSort>
     <ng-container *ngFor="let i of tableData.metaData.column_names; let index=index" matColumnDef="{{i}}">
       <ng-container *ngIf="i=='edit'; else dataPart">
